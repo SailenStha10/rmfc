@@ -32,5 +32,6 @@ export const site = {
   },
   copyright:
     '© 2026 Real Madrid Fan Club Nepal. All rights reserved. Designed and developed By',
-  developer: { name: 'Surox Technology', href: 'https://suroxtec.com' },
+  // href is optional: add a link here (for example a portfolio URL) to make the name clickable
+  developer: { name: 'Sailen', href: '' },
 }

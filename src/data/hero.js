@@ -1,4 +1,6 @@
-// Landing slides (rotate automatically; shown one at a time next to a framed photo).
+// Landing slides (rotate automatically). Each photo is cropped to its subject: `image` is the wide crop for
+// desktop (subject toward the right, because the left of the hero is solid navy under the text) and
+// `mobile` is a square crop centred on the subject.
 export const heroSlides = [
   {
     eyebrow: 'Real Madrid Fan Club Nepal',
@@ -7,8 +9,9 @@ export const heroSlides = [
     cta: 'Join Now',
     to: '/join-club',
     image: '/images/hero/hero-1.webp',
-    srcSet: '/images/hero/hero-1-800.webp 800w, /images/hero/hero-1.webp 1600w',
-    alt: 'Members of Real Madrid Fan Club Nepal at a gathering',
+    mobile: '/images/hero/hero-1-m.webp',
+    position: 'lg:object-[center_100%]',
+    alt: 'Players and members of Real Madrid Fan Club Nepal posing with their trophies at the futsal tournament',
   },
   {
     eyebrow: 'Match Screening',
@@ -17,7 +20,9 @@ export const heroSlides = [
     cta: 'View Events',
     to: '/events',
     image: '/images/hero/hero-2.webp',
-    alt: 'Madridistas cheering together during a match screening',
+    mobile: '/images/hero/hero-2-m.webp',
+    position: 'lg:object-[center_85%]',
+    alt: 'Madridistas in Real Madrid shirts cheering together at a match screening',
   },
   {
     eyebrow: 'Official Merchandise',
@@ -26,6 +31,8 @@ export const heroSlides = [
     cta: 'Shop Now',
     to: '/shop',
     image: '/images/hero/hero-3.webp',
-    alt: 'Real Madrid merchandise',
+    mobile: '/images/hero/hero-3-m.webp',
+    position: 'lg:object-[center_85%]',
+    alt: 'The Santiago Bernabéu pitch under the roof, with the REAL MADRID stand',
   },
 ]

@@ -18,10 +18,10 @@ export default function Home() {
     <>
       <Seo description="Join Nepal's official Real Madrid fan club: match screenings, events, wings across Nepal and the Madridista community." path="/" />
       <Hero />
-      <LegacyStats />
+      <FactsStrip facts={aboutPage.facts} />
       <StatementBand />
       <AboutSection />
-      <FactsStrip facts={aboutPage.facts} />
+      <LegacyStats />
       <MatchSection />
       <PresidentMessage />
       <GalleryPreview />

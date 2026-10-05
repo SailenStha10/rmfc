@@ -7,8 +7,8 @@ export const cta = {
   secondary: { label: 'Shop Merchandise', to: '/shop' },
   // icon names map to lucide-react icons in CTABanner
   perks: [
-    { icon: 'Tv', title: 'Screenings', text: 'Watch every big match together.' },
-    { icon: 'Shirt', title: 'Merch', text: 'Official fan club merchandise.' },
-    { icon: 'CalendarDays', title: 'Events', text: 'Futsal, meetups and more.' },
+    { icon: 'Tv', title: 'Screenings', text: 'Watch every big match together.', to: '/events?category=Screening' },
+    { icon: 'Shirt', title: 'Merch', text: 'Official fan club merchandise.', to: '/shop' },
+    { icon: 'CalendarDays', title: 'Events', text: 'Futsal, meetups and more.', to: '/events' },
   ],
 }

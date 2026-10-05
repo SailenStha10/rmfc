@@ -18,11 +18,20 @@ export default function Footer() {
   const { contact } = site
   return (
     <footer className="bg-ink text-white">
-      <div aria-hidden="true" className="h-1 bg-gradient-to-r from-primary via-primary/40 to-transparent" />
+      <div
+        aria-hidden="true"
+        className="h-1 bg-gradient-to-r from-primary via-primary/40 to-transparent"
+      />
       <Container className="grid gap-12 py-16 sm:grid-cols-2 lg:grid-cols-4">
         <div>
           <span className="mb-5 inline-flex rounded-2xl bg-white p-2.5">
-            <img src={site.logo} alt={site.fullName} width="600" height="359" className="h-14 w-auto" />
+            <img
+              src={site.logo}
+              alt={site.fullName}
+              width="600"
+              height="359"
+              className="h-14 w-auto"
+            />
           </span>
           <p className="max-w-xs text-white/70">{site.brandText}</p>
           <ul className="mt-6 flex gap-3">
@@ -75,7 +84,8 @@ export default function Footer() {
           <h2 className={headingClass}>Contact</h2>
           <ul className="space-y-3.5 text-white/70">
             <li className="flex items-start gap-3">
-              <MapPin size={18} className="mt-1 shrink-0 text-primary" aria-hidden="true" /> {contact.address}
+              <MapPin size={18} className="mt-1 shrink-0 text-primary" aria-hidden="true" />{' '}
+              {contact.address}
             </li>
             <li className="flex items-start gap-3">
               <Phone size={18} className="mt-1 shrink-0 text-primary" aria-hidden="true" />
@@ -99,16 +109,22 @@ export default function Footer() {
         <Container className="flex flex-col items-center justify-between gap-2 py-5 text-center text-sm text-white/60 md:flex-row md:text-left">
           <p>
             {site.copyright}{' '}
-            <a
-              href={site.developer.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline hover:text-white"
-            >
-              {site.developer.name}
-            </a>
+            {site.developer.href ? (
+              <a
+                href={site.developer.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-white"
+              >
+                {site.developer.name}
+              </a>
+            ) : (
+              <span className="font-semibold text-white/85">{site.developer.name}</span>
+            )}
           </p>
-          <p className="font-display text-lg uppercase tracking-[0.15em] text-white/80">{site.tagline}</p>
+          <p className="font-display text-lg uppercase tracking-[0.15em] text-white/80">
+            {site.tagline}
+          </p>
         </Container>
       </div>
     </footer>

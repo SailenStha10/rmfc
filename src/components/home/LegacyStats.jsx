@@ -26,7 +26,7 @@ function CountUp({ to }) {
 // Sits directly under the hero: same navy family, big numbers, no boxes.
 export default function LegacyStats() {
   return (
-    <section className="bg-ink-soft pb-16 pt-8 text-white md:pb-24">
+    <section className="bg-ink-soft py-16 text-white md:py-24">
       <Container>
         <SectionHeading label="Legacy" title={legacyHeading} light />
         <ul className="grid grid-cols-2 gap-y-10 lg:grid-cols-4">

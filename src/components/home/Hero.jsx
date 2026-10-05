@@ -10,7 +10,7 @@ const INTERVAL = 2000 // each slide stays for 2 seconds
 const FADE_DESKTOP =
   'linear-gradient(to right, #060a1c 0%, #060a1c 42%, rgba(6,10,28,0.92) 52%, rgba(6,10,28,0.55) 66%, rgba(6,10,28,0.15) 82%, rgba(6,10,28,0) 100%)'
 const FADE_MOBILE =
-  'linear-gradient(to bottom, rgba(6,10,28,0.15) 0%, rgba(6,10,28,0.7) 28%, #060a1c 52%)'
+  'linear-gradient(to bottom, rgba(6,10,28,0.1) 0%, rgba(6,10,28,0) 30%, rgba(6,10,28,0.6) 72%, #060a1c 100%)'
 
 // The trophy is 82% of the hero height (a 62:100 image) and is pushed half its own width off the left edge,
 // so the screen cuts it in two. HALF_TROPHY = the visible half, used to inset the text.
@@ -51,28 +51,28 @@ export default function Hero() {
       <h1 className="sr-only">Real Madrid Fan Club Nepal</h1>
 
       {/* photos: full width, crossfading */}
-      <div className="absolute inset-0 -z-20 grid">
+      <div className="absolute inset-x-0 top-0 -z-20 grid h-[56svh] lg:inset-0 lg:h-auto">
         {heroSlides.map((s, i) => (
-          <img
-            key={s.image}
-            src={s.image}
-            srcSet={s.srcSet}
-            sizes={s.srcSet ? '100vw' : undefined}
-            alt={s.alt}
-            width="1600"
-            height="1100"
-            loading={i === 0 ? 'eager' : 'lazy'}
-            aria-hidden={i !== index}
-            className={`h-full w-full object-cover object-[70%_center] transition-all duration-700 ease-out [grid-area:1/1] lg:object-center ${
-              i === index ? 'scale-100 opacity-100' : 'scale-105 opacity-0'
-            }`}
-          />
+          <picture key={s.image} className="block h-full w-full [grid-area:1/1]">
+            <source media="(max-width: 1023px)" srcSet={s.mobile} />
+            <img
+              src={s.image}
+              alt={s.alt}
+              width="1600"
+              height="900"
+              loading={i === 0 ? 'eager' : 'lazy'}
+              aria-hidden={i !== index}
+              className={`h-full w-full object-cover object-[60%_center] transition-all duration-700 ease-out ${s.position} ${
+                i === index ? 'scale-100 opacity-100' : 'scale-105 opacity-0'
+              }`}
+            />
+          </picture>
         ))}
       </div>
       {/* solid navy under the text, fading out to the photo */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 -z-10 lg:hidden"
+        className="absolute inset-x-0 top-0 -z-10 h-[56svh] lg:hidden"
         style={{ background: FADE_MOBILE }}
       />
       <div

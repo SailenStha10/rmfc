@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useSearchParams } from 'react-router-dom'
 import { Search } from 'lucide-react'
 import PageBanner from '@/components/common/PageBanner'
 import Container from '@/components/common/Container'
@@ -15,7 +16,9 @@ const tabClass = (on) =>
   }`
 
 export default function Events() {
-  const [category, setCategory] = useState('All')
+  const [params] = useSearchParams()
+  const fromUrl = params.get('category')
+  const [category, setCategory] = useState(eventCategories.includes(fromUrl) ? fromUrl : 'All')
   const [when, setWhen] = useState('Upcoming')
   const [query, setQuery] = useState('')
 

@@ -1,4 +1,5 @@
-import { CalendarDays, Shirt, Tv } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import { ArrowUpRight, CalendarDays, Shirt, Tv } from 'lucide-react'
 import Button from '@/components/common/Button'
 import Container from '@/components/common/Container'
 import Reveal from '@/components/common/Reveal'
@@ -15,7 +16,10 @@ export default function CTABanner() {
         loading="lazy"
         className="absolute inset-0 -z-20 h-full w-full object-cover opacity-25"
       />
-      <div aria-hidden="true" className="absolute inset-0 -z-10 bg-gradient-to-r from-ink via-ink/90 to-ink-soft/70" />
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 -z-10 bg-gradient-to-r from-ink via-ink/90 to-ink-soft/70"
+      />
       <Container className="grid items-center gap-12 lg:grid-cols-5 lg:gap-16">
         <Reveal className="lg:col-span-3">
           <p className="mb-5 flex items-center gap-3 font-heading text-xs font-semibold uppercase tracking-[0.25em] text-white/80">
@@ -39,17 +43,26 @@ export default function CTABanner() {
             {cta.perks.map((perk) => {
               const Icon = icons[perk.icon]
               return (
-                <li
-                  key={perk.title}
-                  className="flex items-center gap-4 rounded-2xl bg-white/5 p-5 ring-1 ring-ink-line"
-                >
-                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary text-primary-foreground">
-                    <Icon size={22} aria-hidden="true" />
-                  </span>
-                  <div>
-                    <p className="font-display text-xl uppercase tracking-wide">{perk.title}</p>
-                    <p className="text-sm text-white/70">{perk.text}</p>
-                  </div>
+                <li key={perk.title}>
+                  <Link
+                    to={perk.to}
+                    className="group flex items-center gap-4 rounded-2xl bg-white/5 p-5 ring-1 ring-ink-line transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/10 hover:ring-primary/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white"
+                  >
+                    <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary text-primary-foreground transition-transform duration-300 group-hover:scale-105">
+                      <Icon size={22} aria-hidden="true" />
+                    </span>
+                    <span className="flex-1">
+                      <span className="block font-display text-xl uppercase tracking-wide">
+                        {perk.title}
+                      </span>
+                      <span className="block text-sm text-white/70">{perk.text}</span>
+                    </span>
+                    <ArrowUpRight
+                      size={22}
+                      aria-hidden="true"
+                      className="text-white/40 transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-primary"
+                    />
+                  </Link>
                 </li>
               )
             })}
