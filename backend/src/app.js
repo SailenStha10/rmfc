@@ -1,13 +1,16 @@
 import express from 'express';
 import cors from 'cors';
 import healthRouter from './routes/health.js';
+import matchesRouter from './routes/matches.js';
+import { config } from './config.js';
 
 const app = express();
 
-app.use(cors({ origin: process.env.CORS_ORIGIN || 'http://localhost:5173' }));
+app.use(cors({ origin: config.corsOrigin }));
 app.use(express.json());
 
 app.use('/api/health', healthRouter);
+app.use('/api/matches', matchesRouter);
 
 app.use((req, res) => {
   res.status(404).json({ error: 'Not found' });

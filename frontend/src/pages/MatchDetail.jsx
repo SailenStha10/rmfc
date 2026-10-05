@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom'
-import { ArrowLeft, MapPin, Tv } from 'lucide-react'
+import { ArrowLeft, ExternalLink, MapPin, Tv } from 'lucide-react'
 import PageBanner from '@/components/common/PageBanner'
 import Seo from '@/components/common/Seo'
 import Container from '@/components/common/Container'
@@ -7,7 +7,10 @@ import Button from '@/components/common/Button'
 import Badge from '@/components/common/Badge'
 import NotFound from './NotFound'
 import { recentMatches } from '@/data/matches'
+import TeamLogo from '@/components/common/TeamLogo'
+import { useMatches } from '@/hooks/useMatches'
 import { formatDate } from '@/utils/formatDate'
+import { formatMatchDate } from '@/utils/formatMatchDate'
 
 function TimelineColumn({ team, entries }) {
   return (
@@ -30,10 +33,69 @@ function TimelineColumn({ team, entries }) {
   )
 }
 
+// Live (FotMob) result: scoreboard, competition and date only.
+function LiveMatch({ match }) {
+  const title = `${match.home.name} vs ${match.away.name}`
+  const date = formatMatchDate(match.dateUtc)
+  return (
+    <>
+      <Seo
+        title={title}
+        description={`${match.home.name} ${match.home.score}-${match.away.score} ${match.away.name} – ${match.competition}, ${date}.`}
+        path={`/match/${match.id}`}
+      />
+      <PageBanner title={title} subtitle={match.competition} />
+      <section className="bg-secondary py-12 md:py-16">
+        <Container className="max-w-3xl">
+          <div className="rounded-2xl border border-border bg-white p-6 text-center shadow-sm md:p-10">
+            <Badge>{match.competition}</Badge>
+            <p className="mt-2 text-sm text-muted-foreground">{date} · FT</p>
+            <div className="mt-6 grid grid-cols-[1fr_auto_1fr] items-center gap-3 md:gap-6">
+              {[match.home, match.away].map((t, i) => (
+                <div key={t.id} className={`flex flex-col items-center gap-2 ${i ? 'order-3' : ''}`}>
+                  <TeamLogo team={t} size={64} />
+                  <p className="font-heading text-base font-bold md:text-xl">{t.name}</p>
+                </div>
+              ))}
+              <p
+                className="order-2 rounded-lg bg-accent px-5 py-3 font-heading text-3xl font-black text-accent-foreground md:text-5xl"
+                aria-label={`Score ${match.home.score} to ${match.away.score}`}
+              >
+                {match.home.score} - {match.away.score}
+              </p>
+            </div>
+            <p className="mt-6">
+              <a
+                href={match.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline"
+              >
+                Full match details on FotMob <ExternalLink size={14} aria-hidden="true" />
+              </a>
+            </p>
+          </div>
+          <p className="mt-8 text-center">
+            <Button to="/" variant="ghost">
+              <ArrowLeft size={16} aria-hidden="true" /> Back to home
+            </Button>
+          </p>
+        </Container>
+      </section>
+    </>
+  )
+}
+
 export default function MatchDetail() {
   const { slug } = useParams()
+  const { data, loading } = useMatches()
   const match = recentMatches.find((m) => m.slug === slug)
-  if (!match) return <NotFound />
+  if (!match) {
+    const live = data?.recentResults.find((r) => r.id === slug)
+    if (live) return <LiveMatch match={live} />
+    if (loading) return <div className="min-h-[50vh]" aria-busy="true" />
+    return <NotFound />
+  }
 
   const [homeScore, awayScore] = match.score.split(' - ')
 

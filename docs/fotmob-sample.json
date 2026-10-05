@@ -1,0 +1,1963 @@
+{
+  "details": {
+    "id": 8633,
+    "name": "Real Madrid"
+  },
+  "overview": {
+    "nextMatch": {
+      "id": 5868089,
+      "pageUrl": "/matches/real-madrid-vs-villarreal/2xnfqu#5868089",
+      "opponent": {
+        "id": 10205,
+        "name": "Villarreal",
+        "score": 0
+      },
+      "home": {
+        "id": 8633,
+        "name": "Real Madrid",
+        "score": 0
+      },
+      "away": {
+        "id": 10205,
+        "name": "Villarreal",
+        "score": 0
+      },
+      "displayTournament": false,
+      "notStarted": true,
+      "tournament": {
+        "name": "LaLiga",
+        "stage": "",
+        "leagueId": 87
+      },
+      "status": {
+        "utcTime": "2026-10-10T19:00:00.000Z",
+        "started": false,
+        "cancelled": false,
+        "finished": false
+      },
+      "startDay": null
+    },
+    "lastMatch": {
+      "id": 5868072,
+      "pageUrl": "/matches/real-madrid-vs-atletico-madrid/2ubozo#5868072",
+      "opponent": {
+        "id": 9906,
+        "name": "Atlético Madrid",
+        "score": 2
+      },
+      "home": {
+        "id": 9906,
+        "name": "Atlético Madrid",
+        "score": 2
+      },
+      "away": {
+        "id": 8633,
+        "name": "Real Madrid",
+        "score": 1
+      },
+      "displayTournament": false,
+      "result": -1,
+      "notStarted": false,
+      "tournament": {
+        "name": "LaLiga",
+        "stage": "",
+        "leagueId": 87
+      },
+      "status": {
+        "utcTime": "2026-09-20T14:15:00.000Z",
+        "finished": true,
+        "started": true,
+        "cancelled": false,
+        "awarded": false,
+        "scoreStr": "2 - 1",
+        "reason": {
+          "short": "FT",
+          "shortKey": "fulltime_short",
+          "long": "Full-Time",
+          "longKey": "finished"
+        }
+      }
+    },
+    "venue": {
+      "name": "Estadio Bernabéu",
+      "location": [
+        "40.453068279",
+        "-3.688353896"
+      ],
+      "city": "Madrid"
+    }
+  },
+  "fixtures": {
+    "allFixtures": {
+      "fixtures": [
+        {
+          "id": 5958714,
+          "pageUrl": "/matches/leganes-vs-real-madrid/28xeat#5958714",
+          "opponent": {
+            "id": 7854,
+            "name": "Leganés",
+            "score": 1
+          },
+          "home": {
+            "id": 8633,
+            "name": "Real Madrid",
+            "score": 4
+          },
+          "away": {
+            "id": 7854,
+            "name": "Leganés",
+            "score": 1
+          },
+          "displayTournament": true,
+          "result": 1,
+          "notStarted": false,
+          "tournament": {
+            "name": "Club Friendlies",
+            "stage": "",
+            "leagueId": 489
+          },
+          "status": {
+            "utcTime": "2026-07-28T16:00:00.000Z",
+            "finished": true,
+            "started": true,
+            "cancelled": false,
+            "awarded": false,
+            "scoreStr": "4 - 1",
+            "reason": {
+              "short": "FT",
+              "shortKey": "fulltime_short",
+              "long": "Full-Time",
+              "longKey": "finished"
+            }
+          }
+        },
+        {
+          "id": 5909892,
+          "pageUrl": "/matches/fiorentina-vs-real-madrid/2fr0sh#5909892",
+          "opponent": {
+            "id": 8535,
+            "name": "Fiorentina",
+            "score": 2
+          },
+          "home": {
+            "id": 8633,
+            "name": "Real Madrid",
+            "score": 2
+          },
+          "away": {
+            "id": 8535,
+            "name": "Fiorentina",
+            "score": 2
+          },
+          "displayTournament": true,
+          "result": 0,
+          "notStarted": false,
+          "tournament": {
+            "name": "Club Friendlies",
+            "stage": "",
+            "leagueId": 489
+          },
+          "status": {
+            "utcTime": "2026-08-01T16:00:00.000Z",
+            "finished": true,
+            "started": true,
+            "cancelled": false,
+            "awarded": false,
+            "scoreStr": "2 - 2",
+            "reason": {
+              "short": "FT",
+              "shortKey": "fulltime_short",
+              "long": "Full-Time",
+              "longKey": "finished"
+            }
+          }
+        },
+        {
+          "id": 5970397,
+          "pageUrl": "/matches/ferencvaros-vs-real-madrid/2ckw6l#5970397",
+          "opponent": {
+            "id": 8222,
+            "name": "Ferencváros",
+            "score": 1
+          },
+          "home": {
+            "id": 8222,
+            "name": "Ferencváros",
+            "score": 1
+          },
+          "away": {
+            "id": 8633,
+            "name": "Real Madrid",
+            "score": 2
+          },
+          "displayTournament": true,
+          "result": 1,
+          "notStarted": false,
+          "tournament": {
+            "name": "Club Friendlies",
+            "stage": "",
+            "leagueId": 489
+          },
+          "status": {
+            "utcTime": "2026-08-08T17:00:00.000Z",
+            "finished": true,
+            "started": true,
+            "cancelled": false,
+            "awarded": false,
+            "scoreStr": "1 - 2",
+            "reason": {
+              "short": "FT",
+              "shortKey": "fulltime_short",
+              "long": "Full-Time",
+              "longKey": "finished"
+            }
+          }
+        },
+        {
+          "id": 5962500,
+          "pageUrl": "/matches/real-madrid-vs-deportivo-coruna/2syz73#5962500",
+          "opponent": {
+            "id": 9783,
+            "name": "Deportivo A Coruña",
+            "score": 0
+          },
+          "home": {
+            "id": 9783,
+            "name": "Deportivo A Coruña",
+            "score": 0
+          },
+          "away": {
+            "id": 8633,
+            "name": "Real Madrid",
+            "score": 1
+          },
+          "displayTournament": true,
+          "result": 1,
+          "notStarted": false,
+          "tournament": {
+            "name": "Club Friendlies",
+            "stage": "",
+            "leagueId": 489
+          },
+          "status": {
+            "utcTime": "2026-08-12T19:00:00.000Z",
+            "finished": true,
+            "started": true,
+            "cancelled": false,
+            "awarded": false,
+            "scoreStr": "0 - 1",
+            "reason": {
+              "short": "FT",
+              "shortKey": "fulltime_short",
+              "long": "Full-Time",
+              "longKey": "finished"
+            }
+          }
+        },
+        {
+          "id": 5979020,
+          "pageUrl": "/matches/real-madrid-vs-schalke-04/2xgz9q#5979020",
+          "opponent": {
+            "id": 10189,
+            "name": "Schalke 04",
+            "score": 0
+          },
+          "home": {
+            "id": 10189,
+            "name": "Schalke 04",
+            "score": 0
+          },
+          "away": {
+            "id": 8633,
+            "name": "Real Madrid",
+            "score": 3
+          },
+          "displayTournament": true,
+          "result": 1,
+          "notStarted": false,
+          "tournament": {
+            "name": "Club Friendlies",
+            "stage": "",
+            "leagueId": 489
+          },
+          "status": {
+            "utcTime": "2026-08-16T15:00:00.000Z",
+            "finished": true,
+            "started": true,
+            "cancelled": false,
+            "awarded": false,
+            "scoreStr": "0 - 3",
+            "reason": {
+              "short": "FT",
+              "shortKey": "fulltime_short",
+              "long": "Full-Time",
+              "longKey": "finished"
+            }
+          }
+        },
+        {
+          "id": 5868025,
+          "pageUrl": "/matches/espanyol-vs-real-madrid/2fzhol#5868025",
+          "opponent": {
+            "id": 8558,
+            "name": "Espanyol",
+            "score": 1
+          },
+          "home": {
+            "id": 8558,
+            "name": "Espanyol",
+            "score": 1
+          },
+          "away": {
+            "id": 8633,
+            "name": "Real Madrid",
+            "score": 2
+          },
+          "displayTournament": false,
+          "result": 1,
+          "notStarted": false,
+          "tournament": {
+            "name": "LaLiga",
+            "stage": "",
+            "leagueId": 87
+          },
+          "status": {
+            "utcTime": "2026-08-22T19:30:00.000Z",
+            "finished": true,
+            "started": true,
+            "cancelled": false,
+            "awarded": false,
+            "scoreStr": "1 - 2",
+            "reason": {
+              "short": "FT",
+              "shortKey": "fulltime_short",
+              "long": "Full-Time",
+              "longKey": "finished"
+            }
+          }
+        },
+        {
+          "id": 5868018,
+          "pageUrl": "/matches/real-sociedad-vs-real-madrid/2g087q#5868018",
+          "opponent": {
+            "id": 8560,
+            "name": "Real Sociedad",
+            "score": 1
+          },
+          "home": {
+            "id": 8633,
+            "name": "Real Madrid",
+            "score": 4
+          },
+          "away": {
+            "id": 8560,
+            "name": "Real Sociedad",
+            "score": 1
+          },
+          "displayTournament": false,
+          "result": 1,
+          "notStarted": false,
+          "tournament": {
+            "name": "LaLiga",
+            "stage": "",
+            "leagueId": 87
+          },
+          "status": {
+            "utcTime": "2026-08-26T19:00:00.000Z",
+            "finished": true,
+            "started": true,
+            "cancelled": false,
+            "awarded": false,
+            "scoreStr": "4 - 1",
+            "reason": {
+              "short": "FT",
+              "shortKey": "fulltime_short",
+              "long": "Full-Time",
+              "longKey": "finished"
+            }
+          }
+        },
+        {
+          "id": 5868038,
+          "pageUrl": "/matches/real-madrid-vs-malaga/2tv0tl#5868038",
+          "opponent": {
+            "id": 9864,
+            "name": "Málaga",
+            "score": 0
+          },
+          "home": {
+            "id": 8633,
+            "name": "Real Madrid",
+            "score": 4
+          },
+          "away": {
+            "id": 9864,
+            "name": "Málaga",
+            "score": 0
+          },
+          "displayTournament": false,
+          "result": 1,
+          "notStarted": false,
+          "tournament": {
+            "name": "LaLiga",
+            "stage": "",
+            "leagueId": 87
+          },
+          "status": {
+            "utcTime": "2026-08-30T15:00:00.000Z",
+            "finished": true,
+            "started": true,
+            "cancelled": false,
+            "awarded": false,
+            "scoreStr": "4 - 0",
+            "reason": {
+              "short": "FT",
+              "shortKey": "fulltime_short",
+              "long": "Full-Time",
+              "longKey": "finished"
+            }
+          }
+        },
+        {
+          "id": 5868043,
+          "pageUrl": "/matches/real-betis-vs-real-madrid/2gg3e3#5868043",
+          "opponent": {
+            "id": 8603,
+            "name": "Real Betis",
+            "score": 1
+          },
+          "home": {
+            "id": 8603,
+            "name": "Real Betis",
+            "score": 1
+          },
+          "away": {
+            "id": 8633,
+            "name": "Real Madrid",
+            "score": 0
+          },
+          "displayTournament": false,
+          "result": -1,
+          "notStarted": false,
+          "tournament": {
+            "name": "LaLiga",
+            "stage": "",
+            "leagueId": 87
+          },
+          "status": {
+            "utcTime": "2026-09-04T19:00:00.000Z",
+            "finished": true,
+            "started": true,
+            "cancelled": false,
+            "awarded": false,
+            "scoreStr": "1 - 0",
+            "reason": {
+              "short": "FT",
+              "shortKey": "fulltime_short",
+              "long": "Full-Time",
+              "longKey": "finished"
+            }
+          }
+        },
+        {
+          "id": 6106242,
+          "pageUrl": "/matches/real-madrid-vs-inter/2gsapf#6106242",
+          "opponent": {
+            "id": 8636,
+            "name": "Inter",
+            "score": 1
+          },
+          "home": {
+            "id": 8633,
+            "name": "Real Madrid",
+            "score": 2
+          },
+          "away": {
+            "id": 8636,
+            "name": "Inter",
+            "score": 1
+          },
+          "displayTournament": true,
+          "result": 1,
+          "notStarted": false,
+          "tournament": {
+            "name": "Champions League",
+            "stage": "",
+            "leagueId": 42
+          },
+          "status": {
+            "utcTime": "2026-09-08T19:00:00.000Z",
+            "finished": true,
+            "started": true,
+            "cancelled": false,
+            "awarded": false,
+            "scoreStr": "2 - 1",
+            "reason": {
+              "short": "FT",
+              "shortKey": "fulltime_short",
+              "long": "Full-Time",
+              "longKey": "finished"
+            }
+          }
+        },
+        {
+          "id": 5868057,
+          "pageUrl": "/matches/rayo-vallecano-vs-real-madrid/2e2lhn#5868057",
+          "opponent": {
+            "id": 8370,
+            "name": "Rayo Vallecano",
+            "score": 1
+          },
+          "home": {
+            "id": 8633,
+            "name": "Real Madrid",
+            "score": 4
+          },
+          "away": {
+            "id": 8370,
+            "name": "Rayo Vallecano",
+            "score": 1
+          },
+          "displayTournament": false,
+          "result": 1,
+          "notStarted": false,
+          "tournament": {
+            "name": "LaLiga",
+            "stage": "",
+            "leagueId": 87
+          },
+          "status": {
+            "utcTime": "2026-09-12T19:00:00.000Z",
+            "finished": true,
+            "started": true,
+            "cancelled": false,
+            "awarded": false,
+            "scoreStr": "4 - 1",
+            "reason": {
+              "short": "FT",
+              "shortKey": "fulltime_short",
+              "long": "Full-Time",
+              "longKey": "finished"
+            }
+          }
+        },
+        {
+          "id": 5868065,
+          "pageUrl": "/matches/real-madrid-vs-elche/2ycx1c#5868065",
+          "opponent": {
+            "id": 10268,
+            "name": "Elche",
+            "score": 2
+          },
+          "home": {
+            "id": 10268,
+            "name": "Elche",
+            "score": 2
+          },
+          "away": {
+            "id": 8633,
+            "name": "Real Madrid",
+            "score": 3
+          },
+          "displayTournament": false,
+          "result": 1,
+          "notStarted": false,
+          "tournament": {
+            "name": "LaLiga",
+            "stage": "",
+            "leagueId": 87
+          },
+          "status": {
+            "utcTime": "2026-09-15T19:30:00.000Z",
+            "finished": true,
+            "started": true,
+            "cancelled": false,
+            "awarded": false,
+            "scoreStr": "2 - 3",
+            "reason": {
+              "short": "FT",
+              "shortKey": "fulltime_short",
+              "long": "Full-Time",
+              "longKey": "finished"
+            }
+          }
+        },
+        {
+          "id": 5868072,
+          "pageUrl": "/matches/real-madrid-vs-atletico-madrid/2ubozo#5868072",
+          "opponent": {
+            "id": 9906,
+            "name": "Atlético Madrid",
+            "score": 2
+          },
+          "home": {
+            "id": 9906,
+            "name": "Atlético Madrid",
+            "score": 2
+          },
+          "away": {
+            "id": 8633,
+            "name": "Real Madrid",
+            "score": 1
+          },
+          "displayTournament": false,
+          "result": -1,
+          "notStarted": false,
+          "tournament": {
+            "name": "LaLiga",
+            "stage": "",
+            "leagueId": 87
+          },
+          "status": {
+            "utcTime": "2026-09-20T14:15:00.000Z",
+            "finished": true,
+            "started": true,
+            "cancelled": false,
+            "awarded": false,
+            "scoreStr": "2 - 1",
+            "reason": {
+              "short": "FT",
+              "shortKey": "fulltime_short",
+              "long": "Full-Time",
+              "longKey": "finished"
+            }
+          }
+        },
+        {
+          "id": 5868089,
+          "pageUrl": "/matches/real-madrid-vs-villarreal/2xnfqu#5868089",
+          "opponent": {
+            "id": 10205,
+            "name": "Villarreal",
+            "score": 0
+          },
+          "home": {
+            "id": 8633,
+            "name": "Real Madrid",
+            "score": 0
+          },
+          "away": {
+            "id": 10205,
+            "name": "Villarreal",
+            "score": 0
+          },
+          "displayTournament": false,
+          "notStarted": true,
+          "tournament": {
+            "name": "LaLiga",
+            "stage": "",
+            "leagueId": 87
+          },
+          "status": {
+            "utcTime": "2026-10-10T19:00:00.000Z",
+            "started": false,
+            "cancelled": false,
+            "finished": false
+          }
+        },
+        {
+          "id": 6106274,
+          "pageUrl": "/matches/real-madrid-vs-roma/2hatyy#6106274",
+          "opponent": {
+            "id": 8686,
+            "name": "Roma",
+            "score": 0
+          },
+          "home": {
+            "id": 8686,
+            "name": "Roma",
+            "score": 0
+          },
+          "away": {
+            "id": 8633,
+            "name": "Real Madrid",
+            "score": 0
+          },
+          "displayTournament": true,
+          "notStarted": true,
+          "tournament": {
+            "name": "Champions League",
+            "stage": "",
+            "leagueId": 42
+          },
+          "status": {
+            "utcTime": "2026-10-14T19:00:00.000Z",
+            "started": false,
+            "cancelled": false,
+            "finished": false
+          }
+        },
+        {
+          "id": 5868098,
+          "pageUrl": "/matches/sevilla-vs-real-madrid/2ddv45#5868098",
+          "opponent": {
+            "id": 8302,
+            "name": "Sevilla",
+            "score": 0
+          },
+          "home": {
+            "id": 8633,
+            "name": "Real Madrid",
+            "score": 0
+          },
+          "away": {
+            "id": 8302,
+            "name": "Sevilla",
+            "score": 0
+          },
+          "displayTournament": false,
+          "notStarted": true,
+          "tournament": {
+            "name": "LaLiga",
+            "stage": "",
+            "leagueId": 87
+          },
+          "status": {
+            "utcTime": "2026-10-18T19:00:00.000Z",
+            "started": false,
+            "cancelled": false,
+            "finished": false
+          }
+        },
+        {
+          "id": 6106244,
+          "pageUrl": "/matches/real-madrid-vs-rb-leipzig/81hwp83#6106244",
+          "opponent": {
+            "id": 178475,
+            "name": "RB Leipzig",
+            "score": 0
+          },
+          "home": {
+            "id": 8633,
+            "name": "Real Madrid",
+            "score": 0
+          },
+          "away": {
+            "id": 178475,
+            "name": "RB Leipzig",
+            "score": 0
+          },
+          "displayTournament": true,
+          "notStarted": true,
+          "tournament": {
+            "name": "Champions League",
+            "stage": "",
+            "leagueId": 42
+          },
+          "status": {
+            "utcTime": "2026-10-21T19:00:00.000Z",
+            "started": false,
+            "cancelled": false,
+            "finished": false
+          }
+        },
+        {
+          "id": 5868105,
+          "pageUrl": "/matches/real-madrid-vs-barcelona/2grk20#5868105",
+          "opponent": {
+            "id": 8634,
+            "name": "Barcelona",
+            "score": 0
+          },
+          "home": {
+            "id": 8634,
+            "name": "Barcelona",
+            "score": 0
+          },
+          "away": {
+            "id": 8633,
+            "name": "Real Madrid",
+            "score": 0
+          },
+          "displayTournament": false,
+          "notStarted": true,
+          "tournament": {
+            "name": "LaLiga",
+            "stage": "",
+            "leagueId": 87
+          },
+          "status": {
+            "utcTime": "2026-10-25T20:00:00.000Z",
+            "started": false,
+            "cancelled": false,
+            "finished": false
+          }
+        },
+        {
+          "id": 5868118,
+          "pageUrl": "/matches/real-madrid-vs-racing-santander/2hejnl#5868118",
+          "opponent": {
+            "id": 8696,
+            "name": "Racing Santander",
+            "score": 0
+          },
+          "home": {
+            "id": 8696,
+            "name": "Racing Santander",
+            "score": 0
+          },
+          "away": {
+            "id": 8633,
+            "name": "Real Madrid",
+            "score": 0
+          },
+          "displayTournament": false,
+          "notStarted": true,
+          "tournament": {
+            "name": "LaLiga",
+            "stage": "",
+            "leagueId": 87
+          },
+          "status": {
+            "utcTime": "2026-11-01T15:15:00.000Z",
+            "started": false,
+            "cancelled": false,
+            "finished": false
+          }
+        },
+        {
+          "id": 6106401,
+          "pageUrl": "/matches/aek-athens-vs-real-madrid/2g1c0n#6106401",
+          "opponent": {
+            "id": 8563,
+            "name": "AEK Athens",
+            "score": 0
+          },
+          "home": {
+            "id": 8563,
+            "name": "AEK Athens",
+            "score": 0
+          },
+          "away": {
+            "id": 8633,
+            "name": "Real Madrid",
+            "score": 0
+          },
+          "displayTournament": true,
+          "notStarted": true,
+          "tournament": {
+            "name": "Champions League",
+            "stage": "",
+            "leagueId": 42
+          },
+          "status": {
+            "utcTime": "2026-11-04T17:45:00.000Z",
+            "started": false,
+            "cancelled": false,
+            "finished": false
+          }
+        },
+        {
+          "id": 5868129,
+          "pageUrl": "/matches/real-madrid-vs-valencia/2ycigb#5868129",
+          "opponent": {
+            "id": 10267,
+            "name": "Valencia",
+            "score": 0
+          },
+          "home": {
+            "id": 10267,
+            "name": "Valencia",
+            "score": 0
+          },
+          "away": {
+            "id": 8633,
+            "name": "Real Madrid",
+            "score": 0
+          },
+          "displayTournament": false,
+          "notStarted": true,
+          "tournament": {
+            "name": "LaLiga",
+            "stage": "",
+            "leagueId": 87
+          },
+          "status": {
+            "utcTime": "2026-11-08T14:00:00.000Z",
+            "matchDateTbd": true,
+            "matchTimeTbd": false,
+            "started": false,
+            "cancelled": false,
+            "finished": false
+          }
+        },
+        {
+          "id": 5868139,
+          "pageUrl": "/matches/real-madrid-vs-celta-vigo/2uda7y#5868139",
+          "opponent": {
+            "id": 9910,
+            "name": "Celta Vigo",
+            "score": 0
+          },
+          "home": {
+            "id": 8633,
+            "name": "Real Madrid",
+            "score": 0
+          },
+          "away": {
+            "id": 9910,
+            "name": "Celta Vigo",
+            "score": 0
+          },
+          "displayTournament": false,
+          "notStarted": true,
+          "tournament": {
+            "name": "LaLiga",
+            "stage": "",
+            "leagueId": 87
+          },
+          "status": {
+            "utcTime": "2026-11-22T14:00:00.000Z",
+            "matchDateTbd": true,
+            "matchTimeTbd": false,
+            "started": false,
+            "cancelled": false,
+            "finished": false
+          }
+        },
+        {
+          "id": 6106243,
+          "pageUrl": "/matches/real-madrid-vs-psv-eindhoven/2gts0l#6106243",
+          "opponent": {
+            "id": 8640,
+            "name": "PSV Eindhoven",
+            "score": 0
+          },
+          "home": {
+            "id": 8633,
+            "name": "Real Madrid",
+            "score": 0
+          },
+          "away": {
+            "id": 8640,
+            "name": "PSV Eindhoven",
+            "score": 0
+          },
+          "displayTournament": true,
+          "notStarted": true,
+          "tournament": {
+            "name": "Champions League",
+            "stage": "",
+            "leagueId": 42
+          },
+          "status": {
+            "utcTime": "2026-11-24T20:00:00.000Z",
+            "started": false,
+            "cancelled": false,
+            "finished": false
+          }
+        },
+        {
+          "id": 5868148,
+          "pageUrl": "/matches/real-madrid-vs-deportivo-alaves/2tvtdc#5868148",
+          "opponent": {
+            "id": 9866,
+            "name": "Deportivo Alavés",
+            "score": 0
+          },
+          "home": {
+            "id": 8633,
+            "name": "Real Madrid",
+            "score": 0
+          },
+          "away": {
+            "id": 9866,
+            "name": "Deportivo Alavés",
+            "score": 0
+          },
+          "displayTournament": false,
+          "notStarted": true,
+          "tournament": {
+            "name": "LaLiga",
+            "stage": "",
+            "leagueId": 87
+          },
+          "status": {
+            "utcTime": "2026-11-29T14:00:00.000Z",
+            "matchDateTbd": true,
+            "matchTimeTbd": false,
+            "started": false,
+            "cancelled": false,
+            "finished": false
+          }
+        },
+        {
+          "id": 5868152,
+          "pageUrl": "/matches/athletic-club-vs-real-madrid/2dil23#5868152",
+          "opponent": {
+            "id": 8315,
+            "name": "Athletic Club",
+            "score": 0
+          },
+          "home": {
+            "id": 8315,
+            "name": "Athletic Club",
+            "score": 0
+          },
+          "away": {
+            "id": 8633,
+            "name": "Real Madrid",
+            "score": 0
+          },
+          "displayTournament": false,
+          "notStarted": true,
+          "tournament": {
+            "name": "LaLiga",
+            "stage": "",
+            "leagueId": 87
+          },
+          "status": {
+            "utcTime": "2026-12-06T14:00:00.000Z",
+            "matchDateTbd": true,
+            "matchTimeTbd": false,
+            "started": false,
+            "cancelled": false,
+            "finished": false
+          }
+        },
+        {
+          "id": 6106258,
+          "pageUrl": "/matches/real-madrid-vs-arsenal/2tfkqo#6106258",
+          "opponent": {
+            "id": 9825,
+            "name": "Arsenal",
+            "score": 0
+          },
+          "home": {
+            "id": 9825,
+            "name": "Arsenal",
+            "score": 0
+          },
+          "away": {
+            "id": 8633,
+            "name": "Real Madrid",
+            "score": 0
+          },
+          "displayTournament": true,
+          "notStarted": true,
+          "tournament": {
+            "name": "Champions League",
+            "stage": "",
+            "leagueId": 42
+          },
+          "status": {
+            "utcTime": "2026-12-09T20:00:00.000Z",
+            "started": false,
+            "cancelled": false,
+            "finished": false
+          }
+        },
+        {
+          "id": 5868168,
+          "pageUrl": "/matches/osasuna-vs-real-madrid/2e2ylz#5868168",
+          "opponent": {
+            "id": 8371,
+            "name": "Osasuna",
+            "score": 0
+          },
+          "home": {
+            "id": 8633,
+            "name": "Real Madrid",
+            "score": 0
+          },
+          "away": {
+            "id": 8371,
+            "name": "Osasuna",
+            "score": 0
+          },
+          "displayTournament": false,
+          "notStarted": true,
+          "tournament": {
+            "name": "LaLiga",
+            "stage": "",
+            "leagueId": 87
+          },
+          "status": {
+            "utcTime": "2026-12-13T14:00:00.000Z",
+            "matchDateTbd": true,
+            "matchTimeTbd": false,
+            "started": false,
+            "cancelled": false,
+            "finished": false
+          }
+        },
+        {
+          "id": 5868174,
+          "pageUrl": "/matches/real-madrid-vs-deportivo-coruna/2syz73#5868174",
+          "opponent": {
+            "id": 9783,
+            "name": "Deportivo A Coruña",
+            "score": 0
+          },
+          "home": {
+            "id": 9783,
+            "name": "Deportivo A Coruña",
+            "score": 0
+          },
+          "away": {
+            "id": 8633,
+            "name": "Real Madrid",
+            "score": 0
+          },
+          "displayTournament": false,
+          "notStarted": true,
+          "tournament": {
+            "name": "LaLiga",
+            "stage": "",
+            "leagueId": 87
+          },
+          "status": {
+            "utcTime": "2026-12-20T14:00:00.000Z",
+            "matchDateTbd": true,
+            "matchTimeTbd": false,
+            "started": false,
+            "cancelled": false,
+            "finished": false
+          }
+        },
+        {
+          "id": 5868188,
+          "pageUrl": "/matches/getafe-vs-real-madrid/2deybk#5868188",
+          "opponent": {
+            "id": 8305,
+            "name": "Getafe",
+            "score": 0
+          },
+          "home": {
+            "id": 8633,
+            "name": "Real Madrid",
+            "score": 0
+          },
+          "away": {
+            "id": 8305,
+            "name": "Getafe",
+            "score": 0
+          },
+          "displayTournament": false,
+          "notStarted": true,
+          "tournament": {
+            "name": "LaLiga",
+            "stage": "",
+            "leagueId": 87
+          },
+          "status": {
+            "utcTime": "2027-01-03T14:00:00.000Z",
+            "matchDateTbd": true,
+            "matchTimeTbd": false,
+            "started": false,
+            "cancelled": false,
+            "finished": false
+          }
+        },
+        {
+          "id": 5868198,
+          "pageUrl": "/matches/levante-vs-real-madrid/2g7yze#5868198",
+          "opponent": {
+            "id": 8581,
+            "name": "Levante",
+            "score": 0
+          },
+          "home": {
+            "id": 8633,
+            "name": "Real Madrid",
+            "score": 0
+          },
+          "away": {
+            "id": 8581,
+            "name": "Levante",
+            "score": 0
+          },
+          "displayTournament": false,
+          "notStarted": true,
+          "tournament": {
+            "name": "LaLiga",
+            "stage": "",
+            "leagueId": 87
+          },
+          "status": {
+            "utcTime": "2027-01-10T14:00:00.000Z",
+            "matchDateTbd": true,
+            "matchTimeTbd": false,
+            "started": false,
+            "cancelled": false,
+            "finished": false
+          }
+        },
+        {
+          "id": 5868207,
+          "pageUrl": "/matches/real-madrid-vs-malaga/2tv0tl#5868207",
+          "opponent": {
+            "id": 9864,
+            "name": "Málaga",
+            "score": 0
+          },
+          "home": {
+            "id": 9864,
+            "name": "Málaga",
+            "score": 0
+          },
+          "away": {
+            "id": 8633,
+            "name": "Real Madrid",
+            "score": 0
+          },
+          "displayTournament": false,
+          "notStarted": true,
+          "tournament": {
+            "name": "LaLiga",
+            "stage": "",
+            "leagueId": 87
+          },
+          "status": {
+            "utcTime": "2027-01-17T14:00:00.000Z",
+            "matchDateTbd": true,
+            "matchTimeTbd": false,
+            "started": false,
+            "cancelled": false,
+            "finished": false
+          }
+        },
+        {
+          "id": 6106245,
+          "pageUrl": "/matches/real-madrid-vs-lask/2v3yno#6106245",
+          "opponent": {
+            "id": 9977,
+            "name": "LASK",
+            "score": 0
+          },
+          "home": {
+            "id": 8633,
+            "name": "Real Madrid",
+            "score": 0
+          },
+          "away": {
+            "id": 9977,
+            "name": "LASK",
+            "score": 0
+          },
+          "displayTournament": true,
+          "notStarted": true,
+          "tournament": {
+            "name": "Champions League",
+            "stage": "",
+            "leagueId": 42
+          },
+          "status": {
+            "utcTime": "2027-01-19T20:00:00.000Z",
+            "started": false,
+            "cancelled": false,
+            "finished": false
+          }
+        },
+        {
+          "id": 5868218,
+          "pageUrl": "/matches/real-betis-vs-real-madrid/2gg3e3#5868218",
+          "opponent": {
+            "id": 8603,
+            "name": "Real Betis",
+            "score": 0
+          },
+          "home": {
+            "id": 8633,
+            "name": "Real Madrid",
+            "score": 0
+          },
+          "away": {
+            "id": 8603,
+            "name": "Real Betis",
+            "score": 0
+          },
+          "displayTournament": false,
+          "notStarted": true,
+          "tournament": {
+            "name": "LaLiga",
+            "stage": "",
+            "leagueId": 87
+          },
+          "status": {
+            "utcTime": "2027-01-24T14:00:00.000Z",
+            "matchDateTbd": true,
+            "matchTimeTbd": false,
+            "started": false,
+            "cancelled": false,
+            "finished": false
+          }
+        },
+        {
+          "id": 6106334,
+          "pageUrl": "/matches/real-madrid-vs-shakhtar-donetsk/2sdar9#6106334",
+          "opponent": {
+            "id": 9728,
+            "name": "Shakhtar Donetsk",
+            "score": 0
+          },
+          "home": {
+            "id": 9728,
+            "name": "Shakhtar Donetsk",
+            "score": 0
+          },
+          "away": {
+            "id": 8633,
+            "name": "Real Madrid",
+            "score": 0
+          },
+          "displayTournament": true,
+          "notStarted": true,
+          "tournament": {
+            "name": "Champions League",
+            "stage": "",
+            "leagueId": 42
+          },
+          "status": {
+            "utcTime": "2027-01-27T20:00:00.000Z",
+            "started": false,
+            "cancelled": false,
+            "finished": false
+          }
+        },
+        {
+          "id": 5868228,
+          "pageUrl": "/matches/rayo-vallecano-vs-real-madrid/2e2lhn#5868228",
+          "opponent": {
+            "id": 8370,
+            "name": "Rayo Vallecano",
+            "score": 0
+          },
+          "home": {
+            "id": 8370,
+            "name": "Rayo Vallecano",
+            "score": 0
+          },
+          "away": {
+            "id": 8633,
+            "name": "Real Madrid",
+            "score": 0
+          },
+          "displayTournament": false,
+          "notStarted": true,
+          "tournament": {
+            "name": "LaLiga",
+            "stage": "",
+            "leagueId": 87
+          },
+          "status": {
+            "utcTime": "2027-01-31T14:00:00.000Z",
+            "matchDateTbd": true,
+            "matchTimeTbd": false,
+            "started": false,
+            "cancelled": false,
+            "finished": false
+          }
+        },
+        {
+          "id": 6019526,
+          "pageUrl": "/matches/real-sociedad-vs-real-madrid/2g087q#6019526",
+          "opponent": {
+            "id": 8560,
+            "name": "Real Sociedad",
+            "score": 0
+          },
+          "home": {
+            "id": 8560,
+            "name": "Real Sociedad",
+            "score": 0
+          },
+          "away": {
+            "id": 8633,
+            "name": "Real Madrid",
+            "score": 0
+          },
+          "displayTournament": true,
+          "notStarted": true,
+          "tournament": {
+            "name": "Super Cup",
+            "stage": "",
+            "leagueId": 139
+          },
+          "status": {
+            "utcTime": "2027-02-03T19:00:00.000Z",
+            "started": false,
+            "cancelled": false,
+            "finished": false
+          }
+        },
+        {
+          "id": 5868239,
+          "pageUrl": "/matches/real-sociedad-vs-real-madrid/2g087q#5868239",
+          "opponent": {
+            "id": 8560,
+            "name": "Real Sociedad",
+            "score": 0
+          },
+          "home": {
+            "id": 8560,
+            "name": "Real Sociedad",
+            "score": 0
+          },
+          "away": {
+            "id": 8633,
+            "name": "Real Madrid",
+            "score": 0
+          },
+          "displayTournament": false,
+          "notStarted": true,
+          "tournament": {
+            "name": "LaLiga",
+            "stage": "",
+            "leagueId": 87
+          },
+          "status": {
+            "utcTime": "2027-02-07T14:00:00.000Z",
+            "matchDateTbd": true,
+            "matchTimeTbd": false,
+            "started": false,
+            "cancelled": false,
+            "finished": false
+          }
+        },
+        {
+          "id": 5868246,
+          "pageUrl": "/matches/athletic-club-vs-real-madrid/2dil23#5868246",
+          "opponent": {
+            "id": 8315,
+            "name": "Athletic Club",
+            "score": 0
+          },
+          "home": {
+            "id": 8633,
+            "name": "Real Madrid",
+            "score": 0
+          },
+          "away": {
+            "id": 8315,
+            "name": "Athletic Club",
+            "score": 0
+          },
+          "displayTournament": false,
+          "notStarted": true,
+          "tournament": {
+            "name": "LaLiga",
+            "stage": "",
+            "leagueId": 87
+          },
+          "status": {
+            "utcTime": "2027-02-14T14:00:00.000Z",
+            "matchDateTbd": true,
+            "matchTimeTbd": false,
+            "started": false,
+            "cancelled": false,
+            "finished": false
+          }
+        },
+        {
+          "id": 5868259,
+          "pageUrl": "/matches/sevilla-vs-real-madrid/2ddv45#5868259",
+          "opponent": {
+            "id": 8302,
+            "name": "Sevilla",
+            "score": 0
+          },
+          "home": {
+            "id": 8302,
+            "name": "Sevilla",
+            "score": 0
+          },
+          "away": {
+            "id": 8633,
+            "name": "Real Madrid",
+            "score": 0
+          },
+          "displayTournament": false,
+          "notStarted": true,
+          "tournament": {
+            "name": "LaLiga",
+            "stage": "",
+            "leagueId": 87
+          },
+          "status": {
+            "utcTime": "2027-02-21T14:00:00.000Z",
+            "matchDateTbd": true,
+            "matchTimeTbd": false,
+            "started": false,
+            "cancelled": false,
+            "finished": false
+          }
+        },
+        {
+          "id": 5868269,
+          "pageUrl": "/matches/real-madrid-vs-valencia/2ycigb#5868269",
+          "opponent": {
+            "id": 10267,
+            "name": "Valencia",
+            "score": 0
+          },
+          "home": {
+            "id": 8633,
+            "name": "Real Madrid",
+            "score": 0
+          },
+          "away": {
+            "id": 10267,
+            "name": "Valencia",
+            "score": 0
+          },
+          "displayTournament": false,
+          "notStarted": true,
+          "tournament": {
+            "name": "LaLiga",
+            "stage": "",
+            "leagueId": 87
+          },
+          "status": {
+            "utcTime": "2027-02-28T14:00:00.000Z",
+            "matchDateTbd": true,
+            "matchTimeTbd": false,
+            "started": false,
+            "cancelled": false,
+            "finished": false
+          }
+        },
+        {
+          "id": 5868280,
+          "pageUrl": "/matches/real-madrid-vs-villarreal/2xnfqu#5868280",
+          "opponent": {
+            "id": 10205,
+            "name": "Villarreal",
+            "score": 0
+          },
+          "home": {
+            "id": 10205,
+            "name": "Villarreal",
+            "score": 0
+          },
+          "away": {
+            "id": 8633,
+            "name": "Real Madrid",
+            "score": 0
+          },
+          "displayTournament": false,
+          "notStarted": true,
+          "tournament": {
+            "name": "LaLiga",
+            "stage": "",
+            "leagueId": 87
+          },
+          "status": {
+            "utcTime": "2027-03-07T14:00:00.000Z",
+            "matchDateTbd": true,
+            "matchTimeTbd": false,
+            "started": false,
+            "cancelled": false,
+            "finished": false
+          }
+        },
+        {
+          "id": 5868290,
+          "pageUrl": "/matches/espanyol-vs-real-madrid/2fzhol#5868290",
+          "opponent": {
+            "id": 8558,
+            "name": "Espanyol",
+            "score": 0
+          },
+          "home": {
+            "id": 8633,
+            "name": "Real Madrid",
+            "score": 0
+          },
+          "away": {
+            "id": 8558,
+            "name": "Espanyol",
+            "score": 0
+          },
+          "displayTournament": false,
+          "notStarted": true,
+          "tournament": {
+            "name": "LaLiga",
+            "stage": "",
+            "leagueId": 87
+          },
+          "status": {
+            "utcTime": "2027-03-14T14:00:00.000Z",
+            "matchDateTbd": true,
+            "matchTimeTbd": false,
+            "started": false,
+            "cancelled": false,
+            "finished": false
+          }
+        },
+        {
+          "id": 5868292,
+          "pageUrl": "/matches/real-madrid-vs-celta-vigo/2uda7y#5868292",
+          "opponent": {
+            "id": 9910,
+            "name": "Celta Vigo",
+            "score": 0
+          },
+          "home": {
+            "id": 9910,
+            "name": "Celta Vigo",
+            "score": 0
+          },
+          "away": {
+            "id": 8633,
+            "name": "Real Madrid",
+            "score": 0
+          },
+          "displayTournament": false,
+          "notStarted": true,
+          "tournament": {
+            "name": "LaLiga",
+            "stage": "",
+            "leagueId": 87
+          },
+          "status": {
+            "utcTime": "2027-03-21T14:00:00.000Z",
+            "matchDateTbd": true,
+            "matchTimeTbd": false,
+            "started": false,
+            "cancelled": false,
+            "finished": false
+          }
+        },
+        {
+          "id": 5868309,
+          "pageUrl": "/matches/real-madrid-vs-atletico-madrid/2ubozo#5868309",
+          "opponent": {
+            "id": 9906,
+            "name": "Atlético Madrid",
+            "score": 0
+          },
+          "home": {
+            "id": 8633,
+            "name": "Real Madrid",
+            "score": 0
+          },
+          "away": {
+            "id": 9906,
+            "name": "Atlético Madrid",
+            "score": 0
+          },
+          "displayTournament": false,
+          "notStarted": true,
+          "tournament": {
+            "name": "LaLiga",
+            "stage": "",
+            "leagueId": 87
+          },
+          "status": {
+            "utcTime": "2027-04-04T13:00:00.000Z",
+            "matchDateTbd": true,
+            "matchTimeTbd": false,
+            "started": false,
+            "cancelled": false,
+            "finished": false
+          }
+        },
+        {
+          "id": 5868315,
+          "pageUrl": "/matches/osasuna-vs-real-madrid/2e2ylz#5868315",
+          "opponent": {
+            "id": 8371,
+            "name": "Osasuna",
+            "score": 0
+          },
+          "home": {
+            "id": 8371,
+            "name": "Osasuna",
+            "score": 0
+          },
+          "away": {
+            "id": 8633,
+            "name": "Real Madrid",
+            "score": 0
+          },
+          "displayTournament": false,
+          "notStarted": true,
+          "tournament": {
+            "name": "LaLiga",
+            "stage": "",
+            "leagueId": 87
+          },
+          "status": {
+            "utcTime": "2027-04-11T13:00:00.000Z",
+            "matchDateTbd": true,
+            "matchTimeTbd": false,
+            "started": false,
+            "cancelled": false,
+            "finished": false
+          }
+        },
+        {
+          "id": 5868327,
+          "pageUrl": "/matches/getafe-vs-real-madrid/2deybk#5868327",
+          "opponent": {
+            "id": 8305,
+            "name": "Getafe",
+            "score": 0
+          },
+          "home": {
+            "id": 8305,
+            "name": "Getafe",
+            "score": 0
+          },
+          "away": {
+            "id": 8633,
+            "name": "Real Madrid",
+            "score": 0
+          },
+          "displayTournament": false,
+          "notStarted": true,
+          "tournament": {
+            "name": "LaLiga",
+            "stage": "",
+            "leagueId": 87
+          },
+          "status": {
+            "utcTime": "2027-04-18T13:00:00.000Z",
+            "matchDateTbd": true,
+            "matchTimeTbd": false,
+            "started": false,
+            "cancelled": false,
+            "finished": false
+          }
+        },
+        {
+          "id": 5868337,
+          "pageUrl": "/matches/real-madrid-vs-elche/2ycx1c#5868337",
+          "opponent": {
+            "id": 10268,
+            "name": "Elche",
+            "score": 0
+          },
+          "home": {
+            "id": 8633,
+            "name": "Real Madrid",
+            "score": 0
+          },
+          "away": {
+            "id": 10268,
+            "name": "Elche",
+            "score": 0
+          },
+          "displayTournament": false,
+          "notStarted": true,
+          "tournament": {
+            "name": "LaLiga",
+            "stage": "",
+            "leagueId": 87
+          },
+          "status": {
+            "utcTime": "2027-04-21T13:00:00.000Z",
+            "matchDateTbd": true,
+            "matchTimeTbd": false,
+            "started": false,
+            "cancelled": false,
+            "finished": false
+          }
+        },
+        {
+          "id": 5868347,
+          "pageUrl": "/matches/levante-vs-real-madrid/2g7yze#5868347",
+          "opponent": {
+            "id": 8581,
+            "name": "Levante",
+            "score": 0
+          },
+          "home": {
+            "id": 8581,
+            "name": "Levante",
+            "score": 0
+          },
+          "away": {
+            "id": 8633,
+            "name": "Real Madrid",
+            "score": 0
+          },
+          "displayTournament": false,
+          "notStarted": true,
+          "tournament": {
+            "name": "LaLiga",
+            "stage": "",
+            "leagueId": 87
+          },
+          "status": {
+            "utcTime": "2027-05-02T13:00:00.000Z",
+            "matchDateTbd": true,
+            "matchTimeTbd": false,
+            "started": false,
+            "cancelled": false,
+            "finished": false
+          }
+        },
+        {
+          "id": 5868358,
+          "pageUrl": "/matches/real-madrid-vs-barcelona/2grk20#5868358",
+          "opponent": {
+            "id": 8634,
+            "name": "Barcelona",
+            "score": 0
+          },
+          "home": {
+            "id": 8633,
+            "name": "Real Madrid",
+            "score": 0
+          },
+          "away": {
+            "id": 8634,
+            "name": "Barcelona",
+            "score": 0
+          },
+          "displayTournament": false,
+          "notStarted": true,
+          "tournament": {
+            "name": "LaLiga",
+            "stage": "",
+            "leagueId": 87
+          },
+          "status": {
+            "utcTime": "2027-05-09T13:00:00.000Z",
+            "matchDateTbd": true,
+            "matchTimeTbd": false,
+            "started": false,
+            "cancelled": false,
+            "finished": false
+          }
+        },
+        {
+          "id": 5868368,
+          "pageUrl": "/matches/real-madrid-vs-racing-santander/2hejnl#5868368",
+          "opponent": {
+            "id": 8696,
+            "name": "Racing Santander",
+            "score": 0
+          },
+          "home": {
+            "id": 8633,
+            "name": "Real Madrid",
+            "score": 0
+          },
+          "away": {
+            "id": 8696,
+            "name": "Racing Santander",
+            "score": 0
+          },
+          "displayTournament": false,
+          "notStarted": true,
+          "tournament": {
+            "name": "LaLiga",
+            "stage": "",
+            "leagueId": 87
+          },
+          "status": {
+            "utcTime": "2027-05-16T13:00:00.000Z",
+            "matchDateTbd": true,
+            "matchTimeTbd": false,
+            "started": false,
+            "cancelled": false,
+            "finished": false
+          }
+        },
+        {
+          "id": 5868371,
+          "pageUrl": "/matches/real-madrid-vs-deportivo-alaves/2tvtdc#5868371",
+          "opponent": {
+            "id": 9866,
+            "name": "Deportivo Alavés",
+            "score": 0
+          },
+          "home": {
+            "id": 9866,
+            "name": "Deportivo Alavés",
+            "score": 0
+          },
+          "away": {
+            "id": 8633,
+            "name": "Real Madrid",
+            "score": 0
+          },
+          "displayTournament": false,
+          "notStarted": true,
+          "tournament": {
+            "name": "LaLiga",
+            "stage": "",
+            "leagueId": 87
+          },
+          "status": {
+            "utcTime": "2027-05-23T13:00:00.000Z",
+            "matchDateTbd": true,
+            "matchTimeTbd": false,
+            "started": false,
+            "cancelled": false,
+            "finished": false
+          }
+        },
+        {
+          "id": 5868389,
+          "pageUrl": "/matches/real-madrid-vs-deportivo-coruna/2syz73#5868389",
+          "opponent": {
+            "id": 9783,
+            "name": "Deportivo A Coruña",
+            "score": 0
+          },
+          "home": {
+            "id": 8633,
+            "name": "Real Madrid",
+            "score": 0
+          },
+          "away": {
+            "id": 9783,
+            "name": "Deportivo A Coruña",
+            "score": 0
+          },
+          "displayTournament": false,
+          "notStarted": true,
+          "tournament": {
+            "name": "LaLiga",
+            "stage": "",
+            "leagueId": 87
+          },
+          "status": {
+            "utcTime": "2027-05-30T13:00:00.000Z",
+            "matchDateTbd": true,
+            "matchTimeTbd": false,
+            "started": false,
+            "cancelled": false,
+            "finished": false
+          }
+        }
+      ],
+      "nextMatch": {
+        "id": 5868089,
+        "pageUrl": "/matches/real-madrid-vs-villarreal/2xnfqu#5868089",
+        "opponent": {
+          "id": 10205,
+          "name": "Villarreal",
+          "score": 0
+        },
+        "home": {
+          "id": 8633,
+          "name": "Real Madrid",
+          "score": 0
+        },
+        "away": {
+          "id": 10205,
+          "name": "Villarreal",
+          "score": 0
+        },
+        "displayTournament": false,
+        "notStarted": true,
+        "tournament": {
+          "name": "LaLiga",
+          "stage": "",
+          "leagueId": 87
+        },
+        "status": {
+          "utcTime": "2026-10-10T19:00:00.000Z",
+          "started": false,
+          "cancelled": false,
+          "finished": false
+        }
+      }
+    }
+  }
+}

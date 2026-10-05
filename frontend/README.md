@@ -84,6 +84,31 @@ Convert JPG/PNG first (for example with [squoosh.app](https://squoosh.app)) to k
 - **Search** (header) covers pages, blog posts, wings, matches, events and products.
 - **SEO**: set `site.url` in `src/data/site.js` to the deployed domain so canonical and Open Graph URLs are correct.
 
+## Live match data (FotMob)
+
+The Home "Matchday" section shows the next Real Madrid fixture and the last 5 results from FotMob.
+The browser never calls FotMob: the frontend calls our backend (`GET /api/matches`), which fetches
+`https://www.fotmob.com/api/data/teams?id=8633`, normalizes it and caches it in memory.
+
+| Where | Variable | Default |
+| --- | --- | --- |
+| `frontend/.env` | `VITE_API_BASE_URL` | `http://localhost:5000` |
+| `backend/.env` | `FOTMOB_TEAM_ID` | `8633` |
+| `backend/.env` | `FOTMOB_BASE_URL` | `https://www.fotmob.com` |
+| `backend/.env` | `FOTMOB_CACHE_TTL_SECONDS` | `300` |
+| `backend/.env` | `CORS_ORIGIN` | `http://localhost:5173` (the frontend origin) |
+
+- **Cache:** FotMob is called at most once per TTL. If FotMob fails, the last cached data is served; the
+  endpoint returns `502` only when nothing is cached. `/api/matches` is rate-limited to 60 requests/min per IP.
+- **Fallback:** if the backend is down, the section shows the static data from `src/data/matches.js`
+  with a small "Live data unavailable" note.
+- **Match pages:** `/match/:id` works for both static slugs and FotMob ids (live results).
+- **Refreshing the sample:** `docs/fotmob-sample.json` is a trimmed real response used by the backend tests
+  (`cd backend && npm test`). Re-download the endpoint, trim it as described in `docs/fotmob-notes.md`, and re-run the tests.
+- **Risk:** the FotMob endpoint is unofficial and undocumented. It can change shape or start blocking requests
+  without notice; only `backend/src/services/fotmob.normalizer.js` depends on its shape. Data is for display only
+  and credited to FotMob in the section footer.
+
 ## Deploying
 
 The site is a static single-page app; every route must fall back to `index.html`.
