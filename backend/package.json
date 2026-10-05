@@ -1,0 +1,17 @@
+{
+  "name": "rmfc-backend",
+  "version": "0.1.0",
+  "private": true,
+  "description": "RMFC backend API",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
+  },
+  "type": "module",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.5",
+    "express": "^5.2.1"
+  }
+}
