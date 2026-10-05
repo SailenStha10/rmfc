@@ -5,12 +5,12 @@ import Button from '@/components/common/Button'
 import { authMenu, navItems } from '@/data/navigation'
 
 const linkClass = ({ isActive }) =>
-  `block rounded-md px-3 py-3 font-heading text-base font-semibold ${
-    isActive ? 'bg-primary/10 text-primary' : 'text-foreground hover:bg-secondary'
+  `block border-l-[3px] px-4 py-3 font-display text-lg uppercase tracking-[0.1em] ${
+    isActive ? 'border-primary bg-primary/5 text-primary' : 'border-transparent text-accent hover:bg-secondary'
   }`
 const subLinkClass = ({ isActive }) =>
-  `block rounded-md py-2 pl-8 pr-3 text-sm font-semibold ${
-    isActive ? 'text-primary' : 'text-muted-foreground hover:text-primary'
+  `block border-l-[3px] py-2 pl-9 pr-4 font-heading text-lg font-semibold uppercase tracking-[0.08em] ${
+    isActive ? 'border-primary text-primary' : 'border-transparent text-muted-foreground hover:text-primary'
   }`
 
 export default function MobileMenu({ open, onClose }) {
@@ -30,7 +30,7 @@ export default function MobileMenu({ open, onClose }) {
       <div
         aria-hidden="true"
         onClick={onClose}
-        className={`fixed inset-0 z-40 bg-black/50 transition-opacity lg:hidden ${
+        className={`fixed inset-0 z-40 bg-black/60 transition-opacity lg:hidden ${
           open ? 'opacity-100' : 'pointer-events-none opacity-0'
         }`}
       />
@@ -39,19 +39,17 @@ export default function MobileMenu({ open, onClose }) {
         aria-label="Mobile menu"
         aria-hidden={!open}
         inert={open ? undefined : ''}
-        className={`fixed right-0 top-0 z-50 flex h-full w-72 max-w-[85vw] flex-col bg-white p-4 shadow-xl transition-transform duration-300 lg:hidden ${
+        className={`fixed right-0 top-0 z-50 flex h-full w-80 max-w-[88vw] flex-col bg-white shadow-2xl transition-transform duration-300 lg:hidden ${
           open ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
-        <button
-          type="button"
-          aria-label="Close menu"
-          onClick={onClose}
-          className="mb-4 self-end rounded-md p-2 hover:bg-secondary"
-        >
-          <X size={24} />
-        </button>
-        <nav aria-label="Mobile" className="flex flex-col gap-1 overflow-y-auto">
+        <div className="flex items-center justify-between bg-gradient-to-r from-ink to-ink-soft px-5 py-4 text-white">
+          <span className="font-display text-xl uppercase tracking-[0.2em]">Menu</span>
+          <button type="button" aria-label="Close menu" onClick={onClose} className="rounded-md p-1.5 hover:bg-white/10">
+            <X size={22} />
+          </button>
+        </div>
+        <nav aria-label="Mobile" className="flex flex-1 flex-col gap-0.5 overflow-y-auto py-3">
           {navItems.map((item) => (
             <div key={item.label}>
               <NavLink to={item.to} end={item.to === '/'} className={linkClass}>
@@ -66,14 +64,15 @@ export default function MobileMenu({ open, onClose }) {
                 ))}
             </div>
           ))}
-          <hr className="my-3 border-border" />
+        </nav>
+        <div className="space-y-2 border-t border-border p-4">
           <NavLink to="/login" className={linkClass}>
             Login
           </NavLink>
-          <Button to={authMenu.to} className="mt-2 w-full">
+          <Button to={authMenu.to} className="w-full">
             {authMenu.label}
           </Button>
-        </nav>
+        </div>
       </aside>
     </>
   )

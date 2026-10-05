@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom'
 
 const base =
-  'inline-flex items-center justify-center gap-2 rounded-md px-6 py-3 font-heading text-sm font-semibold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary disabled:cursor-not-allowed disabled:opacity-60'
+  'inline-flex items-center justify-center gap-2 rounded-md px-7 py-3 font-heading text-base font-bold uppercase tracking-[0.1em] transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary disabled:cursor-not-allowed disabled:opacity-60'
 
 const variants = {
-  primary: 'bg-primary text-primary-foreground hover:bg-primary/90',
-  outline: 'border-2 border-current bg-transparent hover:bg-white/10',
+  primary: 'bg-primary text-primary-foreground shadow-md hover:-translate-y-0.5 hover:bg-primary/90 hover:shadow-lg',
+  outline: 'border-2 border-current bg-transparent hover:-translate-y-0.5 hover:bg-white/10',
   ghost: 'bg-transparent text-foreground hover:bg-secondary',
 }
 

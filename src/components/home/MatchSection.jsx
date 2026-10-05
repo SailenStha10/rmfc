@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { CalendarClock, ChevronRight, MapPin } from 'lucide-react'
 import Container from '@/components/common/Container'
 import Reveal from '@/components/common/Reveal'
+import SectionHeading from '@/components/common/SectionHeading'
 import { matchSection, nextMatch, recentMatches } from '@/data/matches'
 import { resultFor } from '@/utils/results'
 import { formatDate } from '@/utils/formatDate'
@@ -56,16 +57,9 @@ export default function MatchSection() {
     <section className="bg-secondary py-16 md:py-24">
       <Container>
         <Reveal className="mb-10 flex flex-wrap items-end justify-between gap-4">
-          <div>
-            <p className="mb-2 flex items-center gap-3 font-heading text-xs font-semibold uppercase tracking-[0.25em] text-primary">
-              <span aria-hidden="true" className="h-0.5 w-8 bg-primary" /> {matchSection.label}
-            </p>
-            <h2 className="font-display text-4xl uppercase tracking-wide text-accent md:text-5xl">
-              {matchSection.heading}
-            </h2>
-          </div>
+          <SectionHeading label={matchSection.label} title={matchSection.heading} align="left" compact className="mb-0" />
           <div className="flex items-center gap-2" role="img" aria-label={`Recent form: ${form.join(' ')}`}>
-            <span className="mr-1 font-heading text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+            <span className="mr-1 font-heading text-sm font-bold uppercase tracking-[0.2em] text-muted-foreground">
               Form
             </span>
             {form.map((r, i) => (

@@ -1,18 +1,6 @@
 import { useEffect, useState } from 'react'
 import { site } from '@/data/site'
 
-const KEY = 'rmfc-splash'
-const CROWN = '/images/brand/crown.webp'
-const TROPHY = '/images/hero/ucl-trophy.webp'
-
-const seenAlready = () => {
-  try {
-    return sessionStorage.getItem(KEY) === '1'
-  } catch {
-    return false
-  }
-}
-
 const reducedMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
 const preload = (src) =>
@@ -22,20 +10,32 @@ const preload = (src) =>
     img.src = src
   })
 
-// Loading screen: two halves (club crown | Champions League trophy) that slide apart to reveal the site.
-// Shown once per browser session; waits for the artwork to load, never longer than a few seconds.
-export default function Splash() {
-  const [phase, setPhase] = useState(() => (seenAlready() ? 'gone' : 'show')) // show -> open -> gone
+// The club logo, shown whole, then split down the middle: each half slides away to reveal the site.
+function LogoHalf({ side }) {
+  const left = side === 'left'
+  return (
+    <div className="relative h-full w-full overflow-hidden bg-ink">
+      {/* a full-width layer, so the left and right panels show the two halves of the same logo */}
+      <div className={`absolute top-0 flex h-full w-screen items-center justify-center ${left ? 'left-0' : 'right-0'}`}>
+        <div className="splash-rise flex h-52 w-52 items-center justify-center rounded-full bg-white p-3 shadow-2xl ring-4 ring-white/10 sm:h-72 sm:w-72 sm:p-4 md:h-80 md:w-80">
+          <img src={site.logo} alt="" width="600" height="359" className="h-full w-full object-contain" />
+        </div>
+      </div>
+    </div>
+  )
+}
 
-  // 1) while showing: wait for a minimum time and the artwork, then open the panels
+// Loading screen: plays on every full page load / refresh (in-app navigation never reloads, so it never replays
+// mid-browsing). Waits for the logo, never longer than a few seconds.
+export default function Splash() {
+  const [phase, setPhase] = useState('show') // show -> open -> gone
+
+  // 1) while showing: wait for a minimum time and the logo, then split open
   useEffect(() => {
     if (phase !== 'show') return undefined
     let cancelled = false
     const minimum = new Promise((r) => setTimeout(r, reducedMotion() ? 500 : 1700))
-    const assets = Promise.race([
-      Promise.all([preload(CROWN), preload(TROPHY)]),
-      new Promise((r) => setTimeout(r, 4000)),
-    ])
+    const assets = Promise.race([preload(site.logo), new Promise((r) => setTimeout(r, 4000))])
     document.body.style.overflow = 'hidden'
     Promise.all([minimum, assets]).then(() => !cancelled && setPhase('open'))
     return () => {
@@ -43,17 +43,12 @@ export default function Splash() {
     }
   }, [phase])
 
-  // 2) once open: let the slide-away animation finish, then remove the overlay for good
+  // 2) once open: let the split animation finish, then remove the overlay for good
   useEffect(() => {
     if (phase !== 'open') return undefined
     document.body.style.overflow = ''
     const t = setTimeout(
       () => {
-        try {
-          sessionStorage.setItem(KEY, '1')
-        } catch {
-          /* private mode: it will simply show again next visit */
-        }
         setPhase('gone')
       },
       reducedMotion() ? 100 : 900,
@@ -64,8 +59,7 @@ export default function Splash() {
   if (phase === 'gone') return null
 
   const open = phase === 'open'
-  const panel =
-    'absolute top-0 flex h-full w-1/2 items-center transition-transform duration-[900ms] ease-[cubic-bezier(0.76,0,0.24,1)]'
+  const slide = 'transition-transform duration-[900ms] ease-[cubic-bezier(0.76,0,0.24,1)]'
 
   return (
     <div
@@ -76,28 +70,16 @@ export default function Splash() {
     >
       <span className="sr-only">Loading {site.fullName}</span>
 
-      <div className={`${panel} left-0 justify-end bg-ink pr-3 sm:pr-6 ${open ? '-translate-x-full' : ''}`}>
-        <img src={CROWN} alt="" width="480" height="324" className="splash-rise w-32 sm:w-52 md:w-64" />
+      <div className={`absolute inset-y-0 left-0 w-1/2 ${slide} ${open ? '-translate-x-full' : ''}`}>
+        <LogoHalf side="left" />
       </div>
-      <div className={`${panel} right-0 justify-start bg-ink-soft pl-3 sm:pl-6 ${open ? 'translate-x-full' : ''}`}>
-        <img
-          src={TROPHY}
-          alt=""
-          width="720"
-          height="1080"
-          className="splash-rise h-44 w-auto sm:h-72 md:h-96"
-          style={{ animationDelay: '0.15s' }}
-        />
+      <div className={`absolute inset-y-0 right-0 w-1/2 ${slide} ${open ? 'translate-x-full' : ''}`}>
+        <LogoHalf side="right" />
       </div>
 
-      {/* seam + progress line */}
       <div
         aria-hidden="true"
-        className={`absolute left-1/2 top-0 h-full w-px -translate-x-1/2 bg-white/15 transition-opacity duration-300 ${open ? 'opacity-0' : ''}`}
-      />
-      <div
-        aria-hidden="true"
-        className={`absolute bottom-10 left-1/2 w-40 -translate-x-1/2 text-center transition-opacity duration-300 ${open ? 'opacity-0' : ''}`}
+        className={`absolute bottom-10 left-1/2 w-44 -translate-x-1/2 text-center transition-opacity duration-300 ${open ? 'opacity-0' : ''}`}
       >
         <p className="mb-3 font-display text-lg uppercase tracking-[0.3em] text-white/80">{site.name}</p>
         <div className="h-0.5 overflow-hidden bg-white/15">

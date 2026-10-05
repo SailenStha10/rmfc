@@ -2,6 +2,8 @@ import Hero from '@/components/home/Hero'
 import LegacyStats from '@/components/home/LegacyStats'
 import StatementBand from '@/components/home/StatementBand'
 import AboutSection from '@/components/home/AboutSection'
+import FactsStrip from '@/components/about/FactsStrip'
+import { aboutPage } from '@/data/aboutPage'
 import MatchSection from '@/components/home/MatchSection'
 import PresidentMessage from '@/components/home/PresidentMessage'
 import GalleryPreview from '@/components/home/GalleryPreview'
@@ -19,6 +21,7 @@ export default function Home() {
       <LegacyStats />
       <StatementBand />
       <AboutSection />
+      <FactsStrip facts={aboutPage.facts} />
       <MatchSection />
       <PresidentMessage />
       <GalleryPreview />

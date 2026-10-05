@@ -9,11 +9,11 @@ function Logo({ partner }) {
       src={partner.logo}
       alt={partner.name}
       loading="lazy"
-      className="max-h-full max-w-full object-contain grayscale transition duration-300 group-hover:grayscale-0"
+      className="max-h-full max-w-full object-contain grayscale transition duration-300 group-hover:scale-105 group-hover:grayscale-0"
     />
   )
   const box =
-    'group flex h-28 items-center justify-center rounded-xl border border-border bg-white p-5 transition-shadow hover:shadow-md'
+    'group flex h-24 items-center justify-center rounded-2xl border border-border bg-white p-4 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg sm:h-32 sm:p-6'
   return partner.href ? (
     <a
       href={partner.href}
@@ -29,6 +29,7 @@ function Logo({ partner }) {
   )
 }
 
+// Nine partners = a perfect 3 x 3 grid at every screen size, so no row is ever left with a gap.
 export default function PartnersGrid() {
   return (
     <section className="bg-white py-16 md:py-24">
@@ -38,9 +39,9 @@ export default function PartnersGrid() {
           title={partnersSection.heading}
           subtitle={partnersSection.text}
         />
-        <ul className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
+        <ul className="mx-auto grid max-w-5xl grid-cols-3 gap-3 sm:gap-5">
           {partners.map((p, i) => (
-            <Reveal as="li" key={p.name} delay={(i % 5) * 0.06} y={16}>
+            <Reveal as="li" key={p.name} delay={(i % 3) * 0.07} y={16}>
               <Logo partner={p} />
             </Reveal>
           ))}

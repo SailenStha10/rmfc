@@ -65,15 +65,16 @@ export default function WingDetail() {
         </Container>
       </section>
 
-      <section className="bg-secondary py-16">
-        <Container className="max-w-3xl">
+      <section className="bg-gradient-to-b from-ink-soft to-ink py-16 md:py-20">
+        <Container className="max-w-4xl">
           <SectionHeading
             label="Wing Location"
             title="Where we are"
             subtitle="See where this wing is based and the districts it covers."
+            light
           />
-          <NepalMap wings={[wing]} active={active} onActive={setActive} />
-          <p className="mt-4 text-center text-sm text-muted-foreground">
+          <NepalMap wings={[wing]} active={active} onActive={setActive} dark />
+          <p className="mt-5 text-center font-heading text-lg font-medium tracking-wide text-white/70">
             Districts: {wing.districts.join(', ')}
           </p>
         </Container>

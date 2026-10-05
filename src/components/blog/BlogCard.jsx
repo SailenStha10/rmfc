@@ -12,7 +12,7 @@ export default function BlogCard({ post, as: Heading = 'h3' }) {
         <Badge>{post.category}</Badge>
         <time dateTime={post.date}>{formatDate(post.date)}</time>
       </div>
-      <Heading className="mb-3 text-xl">
+      <Heading className="mb-3 font-display text-2xl font-normal uppercase leading-tight tracking-wide text-accent">
         <Link to={`/blog/${post.slug}`} className="hover:text-primary">
           {post.title}
         </Link>
@@ -20,7 +20,7 @@ export default function BlogCard({ post, as: Heading = 'h3' }) {
       <p className="mb-5 flex-1 text-muted-foreground">{post.excerpt}</p>
       <Link
         to={`/blog/${post.slug}`}
-        className="inline-flex items-center gap-2 font-heading text-sm font-semibold text-primary hover:gap-3"
+        className="inline-flex items-center gap-2 font-heading text-base font-bold uppercase tracking-[0.12em] text-primary hover:gap-3"
       >
         Read more<span className="sr-only"> about {post.title}</span>
         <ArrowRight size={16} aria-hidden="true" />

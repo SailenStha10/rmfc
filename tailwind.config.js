@@ -19,9 +19,9 @@ export default {
         ink: { DEFAULT: '#060a1c', soft: '#0b1233', line: 'rgba(255,255,255,0.12)' },
       },
       fontFamily: {
-        heading: ['Montserrat', 'sans-serif'],
+        heading: ['"Barlow Condensed"', 'Arial Narrow', 'sans-serif'], // labels, buttons, card titles
         display: ['Anton', 'Impact', 'sans-serif'], // bold, condensed: statements, numbers, hero,
-        body: ['"Open Sans"', 'sans-serif'],
+        body: ['Barlow', 'system-ui', 'sans-serif'], // descriptions: same sporty, slightly condensed family
       },
       borderRadius: { md: '0.375rem', lg: '0.5rem', xl: '0.75rem', '2xl': '1rem' },
     },

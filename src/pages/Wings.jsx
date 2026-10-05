@@ -2,6 +2,7 @@ import { useState } from 'react'
 import PageBanner from '@/components/common/PageBanner'
 import Container from '@/components/common/Container'
 import Reveal from '@/components/common/Reveal'
+import SectionHeading from '@/components/common/SectionHeading'
 import NepalMap from '@/components/common/NepalMap'
 import WingCard from '@/components/about/WingCard'
 import { wings, wingsPage, wingsSection } from '@/data/wings'
@@ -18,36 +19,40 @@ export default function Wings() {
     <>
       <Seo title="Wings" description="Explore the seven regional wings of Real Madrid Fan Club Nepal: Kathmandu, Pokhara, Chitwan, Nuwakot, Province 1, Butwal and Jumla." path="/wings" />
       <PageBanner title="Wings" subtitle={wingsPage.text} />
-      <section className="bg-secondary py-16">
+      <section className="bg-gradient-to-b from-ink-soft to-ink py-14 md:py-20">
         <Container>
-          <p className="mx-auto mb-8 max-w-2xl text-center text-muted-foreground">
-            {wingsSection.text}
-          </p>
-          <div className="mx-auto max-w-4xl">
-            <NepalMap wings={wings} active={active} onActive={setActive} />
+          <SectionHeading label={wingsSection.label} title={wingsSection.heading} subtitle={wingsSection.text} light />
+          <div className="mx-auto max-w-5xl">
+            <NepalMap wings={wings} active={active} onActive={setActive} dark />
           </div>
         </Container>
       </section>
 
       <section className="bg-white py-16 md:py-24">
         <Container>
-          <div className="mb-8 flex items-center justify-between gap-4">
-            <h2 className="text-2xl">{wingsPage.heading}</h2>
-            <label className="flex items-center gap-2 text-sm text-muted-foreground">
+          <div className="mb-10 flex flex-wrap items-end justify-between gap-4">
+            <SectionHeading label="Regional fan groups" title={wingsPage.heading} align="left" compact className="mb-0" />
+            <label className="flex items-center gap-3 font-heading text-sm font-bold uppercase tracking-[0.15em] text-muted-foreground">
               Sort by
               <select
                 value={sort}
                 onChange={(e) => setSort(e.target.value)}
-                className="rounded-md border border-border bg-white px-3 py-2 text-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary"
+                className="rounded-md border-2 border-border bg-white px-3 py-2 font-heading text-base font-semibold normal-case tracking-normal text-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary"
               >
                 <option value="members">Most Members</option>
                 <option value="newest">Newest</option>
               </select>
             </label>
           </div>
-          <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <ul className="flex flex-wrap justify-center gap-6">
             {sorted.map((w, i) => (
-              <Reveal as="li" key={w.slug} delay={(i % 3) * 0.08} y={16}>
+              <Reveal
+                as="li"
+                key={w.slug}
+                delay={(i % 4) * 0.08}
+                y={16}
+                className="w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)] xl:w-[calc(25%-1.125rem)]"
+              >
                 <WingCard wing={w} />
               </Reveal>
             ))}

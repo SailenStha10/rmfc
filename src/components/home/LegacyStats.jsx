@@ -3,6 +3,7 @@ import { animate, useInView, useReducedMotion } from 'framer-motion'
 import { Globe, Medal, Trophy } from 'lucide-react'
 import Container from '@/components/common/Container'
 import Reveal from '@/components/common/Reveal'
+import SectionHeading from '@/components/common/SectionHeading'
 import { legacyHeading, legacyStats } from '@/data/legacy'
 
 const icons = { Trophy, Medal, Globe }
@@ -25,13 +26,9 @@ function CountUp({ to }) {
 // Sits directly under the hero: same navy family, big numbers, no boxes.
 export default function LegacyStats() {
   return (
-    <section className="bg-ink-soft pb-16 pt-6 text-white md:pb-24">
+    <section className="bg-ink-soft pb-16 pt-8 text-white md:pb-24">
       <Container>
-        <Reveal>
-          <h2 className="mb-10 text-center font-display text-3xl uppercase tracking-wider !text-white md:mb-14 md:text-4xl">
-            {legacyHeading}
-          </h2>
-        </Reveal>
+        <SectionHeading label="Legacy" title={legacyHeading} light />
         <ul className="grid grid-cols-2 gap-y-10 lg:grid-cols-4">
           {legacyStats.map((s, i) => {
             const Icon = icons[s.icon]
