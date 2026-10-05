@@ -3,23 +3,24 @@ import { Link, NavLink, useLocation } from 'react-router-dom'
 import { Menu, Search, ShoppingCart } from 'lucide-react'
 import Container from '@/components/common/Container'
 import MobileMenu from './MobileMenu'
+import NavDropdown from './NavDropdown'
 import SearchOverlay from './SearchOverlay'
 import { useCart } from '@/hooks/useCart'
 import { useScrollPosition } from '@/hooks/useScrollPosition'
-import { authLinks, navLinks } from '@/data/navigation'
+import { authMenu, navItems } from '@/data/navigation'
 import { site } from '@/data/site'
 
 const linkClass = ({ isActive }) =>
-  `font-heading text-sm font-semibold transition-colors hover:text-primary ${
+  `py-2 font-heading text-sm font-semibold transition-colors hover:text-primary ${
     isActive ? 'text-primary' : 'text-foreground'
   }`
 
 export default function Header() {
   const { pathname } = useLocation()
-  // menu is "open" only for the page it was opened on, so navigating closes it
-  const [openOn, setOpenOn] = useState(null)
-  const menuOpen = openOn === pathname
+  // menus are "open" only for the page they were opened on, so navigating closes them
+  const [menuOn, setMenuOn] = useState(null)
   const [searchOn, setSearchOn] = useState(null)
+  const menuOpen = menuOn === pathname
   const searchOpen = searchOn === pathname
   const { count } = useCart()
   const scrolled = useScrollPosition() > 10
@@ -33,15 +34,19 @@ export default function Header() {
           <img src={site.logo} alt={site.fullName} width="600" height="359" className="h-14 w-auto" />
         </Link>
 
-        <nav aria-label="Primary" className="hidden items-center gap-6 xl:flex">
-          {navLinks.map((l) => (
-            <NavLink key={l.to} to={l.to} end={l.to === '/'} className={linkClass}>
-              {l.label}
-            </NavLink>
-          ))}
+        <nav aria-label="Primary" className="hidden items-center gap-7 lg:flex">
+          {navItems.map((item) =>
+            item.children ? (
+              <NavDropdown key={item.label} item={item} />
+            ) : (
+              <NavLink key={item.to} to={item.to} end={item.to === '/'} className={linkClass}>
+                {item.label}
+              </NavLink>
+            ),
+          )}
         </nav>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2">
           <button
             type="button"
             aria-label="Search"
@@ -63,26 +68,22 @@ export default function Header() {
               </span>
             )}
           </Link>
-          <div className="hidden items-center gap-4 md:flex">
-            {authLinks.map((l) => (
-              <NavLink key={l.to} to={l.to} className={linkClass}>
-                {l.label}
-              </NavLink>
-            ))}
+          <div className="ml-2 hidden lg:block">
+            <NavDropdown item={authMenu} cta />
           </div>
           <button
             type="button"
             aria-label="Open menu"
             aria-expanded={menuOpen}
             aria-controls="mobile-menu"
-            onClick={() => setOpenOn(pathname)}
-            className="rounded-md p-2 hover:bg-secondary xl:hidden"
+            onClick={() => setMenuOn(pathname)}
+            className="rounded-md p-2 hover:bg-secondary lg:hidden"
           >
             <Menu size={24} />
           </button>
         </div>
       </Container>
-      <MobileMenu open={menuOpen} onClose={() => setOpenOn(null)} />
+      <MobileMenu open={menuOpen} onClose={() => setMenuOn(null)} />
       <SearchOverlay key={searchOpen} open={searchOpen} onClose={() => setSearchOn(null)} />
     </header>
   )

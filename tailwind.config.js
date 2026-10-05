@@ -15,9 +15,12 @@ export default {
         destructive: 'hsl(0 84% 60%)',
         border: 'hsl(220 15% 90%)',
         cream: 'hsl(220 20% 98%)',
+        // deep navy used by the hero, legacy and CTA so the dark sections read as one family
+        ink: { DEFAULT: '#060a1c', soft: '#0b1233', line: 'rgba(255,255,255,0.12)' },
       },
       fontFamily: {
         heading: ['Montserrat', 'sans-serif'],
+        display: ['Anton', 'Impact', 'sans-serif'], // bold, condensed: statements, numbers, hero,
         body: ['"Open Sans"', 'sans-serif'],
       },
       borderRadius: { md: '0.375rem', lg: '0.5rem', xl: '0.75rem', '2xl': '1rem' },
@@ -25,3 +28,4 @@ export default {
   },
   plugins: [],
 }
+

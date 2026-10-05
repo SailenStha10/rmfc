@@ -23,8 +23,7 @@ Requires Node 18+.
 | Build | Vite 8, React 18 |
 | Routing | react-router-dom 6 (routes are code-split with `React.lazy`) |
 | Styling | Tailwind CSS 3 (tokens in `tailwind.config.js`) |
-| Carousel | Swiper |
-| Animation | framer-motion |
+| Animation | framer-motion (LazyMotion) |
 | Lightbox | yet-another-react-lightbox |
 | Icons | lucide-react, react-icons |
 | SEO | react-helmet-async |
@@ -56,11 +55,11 @@ No component contains hard-coded copy. To change the site, edit the data file an
 
 | To change… | Edit |
 |---|---|
-| Nav links | `navigation.js` |
+| Header menu and dropdowns (About Us, Contact, Register) | `navigation.js` (`navItems`, `authMenu`) |
 | Footer, contact details, social links, site URL / SEO description | `site.js` |
-| Hero slides | `hero.js` |
+| Landing hero text and buttons | `hero.js` (trophy image: `public/images/hero/ucl-trophy.webp`) |
 | Home "About" text | `about.js`; full About page and board of directors: `aboutPage.js` |
-| Matches and match detail pages | `matches.js` (the `slug` becomes `/match/:slug`) |
+| Matches, match detail pages and the "Next match" card | `matches.js` (`recentMatches`; set `nextMatch` to show a fixture, `null` shows "TBA") |
 | Legacy numbers | `legacy.js` |
 | President's message | `president.js` |
 | Gallery photos | `gallery.js` (images in `public/images/gallery/`) |
@@ -70,7 +69,7 @@ No component contains hard-coded copy. To change the site, edit the data file an
 | Events | `events.js` (`{ slug, title, category, date: 'YYYY-MM-DD', venue, description }`) |
 | Shop notice / products | `products.js` |
 | Form fields and messages | `forms.js` |
-| CTA banner | `cta.js` |
+| "Become a Madridista" banner and its three perks | `cta.js` |
 
 Adding an image: put a `.webp` file in `public/images/...` and reference it as `/images/...`.
 Convert JPG/PNG first (for example with [squoosh.app](https://squoosh.app)) to keep pages fast.
@@ -80,6 +79,8 @@ Convert JPG/PNG first (for example with [squoosh.app](https://squoosh.app)) to k
 - **Forms** (Join Club, Contact, Login, Register) validate in the browser only. A valid submit logs to the
   console and shows a confirmation; nothing is sent anywhere.
 - **Shop / Cart** show "Coming Soon", matching the live site.
+- **Loading screen**: a two-panel crown + trophy splash (`components/layout/Splash.jsx`) shows once per browser session.
+- **Fonts**: Anton (`font-display`) for statements and numbers, Montserrat for headings, Open Sans for body text.
 - **Search** (header) covers pages, blog posts, wings, matches, events and products.
 - **SEO**: set `site.url` in `src/data/site.js` to the deployed domain so canonical and Open Graph URLs are correct.
 

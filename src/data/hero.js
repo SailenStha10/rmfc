@@ -1,27 +1,10 @@
-export const heroSlides = [
-  {
-    eyebrow: 'Real Madrid Fan Club Nepal',
-    heading: "Nepal's Official Madridista Community",
-    text: 'A home for every Nepalese Madridista to connect, support, and live the spirit of Real Madrid together.',
-    cta: 'Join Now',
-    to: '/join-club',
-    image: '/images/hero/hero-1.webp',
-    srcSet: '/images/hero/hero-1-800.webp 800w, /images/hero/hero-1.webp 1600w',
-  },
-  {
-    eyebrow: 'Match Screening',
-    heading: 'Watch Together. Cheer Together.',
-    text: 'Experience match-day energy with fellow Madridistas.',
-    cta: 'View Events',
-    to: '/events',
-    image: '/images/hero/hero-2.webp',
-  },
-  {
-    eyebrow: 'Official Merchandise',
-    heading: 'Wear The White Pride',
-    text: 'Shop jerseys, caps, hoodies, accessories & more.',
-    cta: 'Shop Now',
-    to: '/shop',
-    image: '/images/hero/hero-3.webp',
-  },
-]
+// Single, minimal landing: one message, one primary action.
+export const hero = {
+  eyebrow: 'Real Madrid Fan Club Nepal',
+  heading: "Nepal's Official Madridista Community",
+  text: 'A home for every Nepalese Madridista to connect, support, and live the spirit of Real Madrid together.',
+  primary: { label: 'Join Now', to: '/join-club' },
+  secondary: { label: 'View Events', to: '/events' },
+  image: '/images/hero/ucl-trophy.webp',
+  imageAlt: 'The UEFA Champions League trophy',
+}

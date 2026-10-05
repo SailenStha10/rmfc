@@ -8,16 +8,29 @@
   h1, h2, h3, h4 { @apply font-heading font-bold text-foreground; }
 }
 
-.hero-slider .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  margin: 0 8px !important; /* >= 24px target spacing */
-  background: #fff;
-  opacity: 0.6;
+/* gentle float for the hero trophy and a slow marquee for the club motto; both stop for reduced-motion users */
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
 }
-.hero-slider .swiper-pagination-bullet-active {
-  background: hsl(348 83% 45%);
-  opacity: 1;
+@keyframes marquee {
+  to { transform: translateX(-50%); }
+}
+@keyframes splash-rise {
+  from { opacity: 0; transform: translateY(16px) scale(0.96); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes splash-bar {
+  from { width: 0; }
+  to { width: 100%; }
+}
+.splash-rise { animation: splash-rise 0.8s ease-out both; }
+.splash-bar { animation: splash-bar 1.7s ease-in-out forwards; }
+.float-slow { animation: float-slow 7s ease-in-out infinite; }
+.marquee { animation: marquee 40s linear infinite; }
+@media (prefers-reduced-motion: reduce) {
+  .float-slow, .marquee, .splash-rise, .splash-bar { animation: none; }
+  .splash-bar { width: 100%; }
 }
 
 

@@ -4,6 +4,10 @@ export const matchSection = {
   subheading: 'Recent Results',
 }
 
+// Next fixture. The live site has none yet, so this stays null ("to be announced").
+// To show one: { home, away, competition, date: 'YYYY-MM-DD', time: '20:30', venue }
+export const nextMatch = null
+
 // timeline entries are copied as listed on rmfcn.com
 export const recentMatches = [
   {
