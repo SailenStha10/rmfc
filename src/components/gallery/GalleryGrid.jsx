@@ -1,6 +1,7 @@
 import Reveal from '@/components/common/Reveal'
 
-export default function GalleryGrid({ images, onOpen }) {
+// eagerCount: how many leading images are above the fold and should load immediately
+export default function GalleryGrid({ images, onOpen, eagerCount = 4 }) {
   return (
     <ul className="grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-4 lg:grid-cols-4">
       {images.map((img, i) => (
@@ -12,9 +13,11 @@ export default function GalleryGrid({ images, onOpen }) {
             className="group relative block aspect-square w-full overflow-hidden rounded-xl bg-secondary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
           >
             <img
-              src={img.src}
+              src={img.thumb}
               alt={img.alt}
-              loading="lazy"
+              width="640"
+              height="640"
+              loading={i < eagerCount ? 'eager' : 'lazy'}
               decoding="async"
               className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
             />

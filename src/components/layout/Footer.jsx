@@ -20,7 +20,7 @@ export default function Footer() {
     <footer className="bg-accent text-white">
       <Container className="grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-4">
         <div>
-          <img src={site.logo} alt={site.fullName} className="mb-4 h-16 w-auto" />
+          <img src={site.logo} alt={site.fullName} width="600" height="359" className="mb-4 h-16 w-auto" />
           <p className="text-sm text-white/70">{site.brandText}</p>
           <ul className="mt-5 flex gap-3">
             {site.socials.map(({ name, href }) => {

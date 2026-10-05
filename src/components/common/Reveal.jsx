@@ -1,9 +1,9 @@
-import { motion, useReducedMotion } from 'framer-motion'
+import { m, useReducedMotion } from 'framer-motion'
 
 // Fade-and-rise on scroll into view; no motion for users who prefer reduced motion.
 export default function Reveal({ as = 'div', delay = 0, y = 24, className = '', children }) {
   const reduce = useReducedMotion()
-  const Tag = motion[as]
+  const Tag = m[as] // lightweight component; features are loaded by <LazyMotion> in main.jsx
   return (
     <Tag
       className={className}

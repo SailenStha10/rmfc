@@ -5,13 +5,13 @@ export const partnersSection = {
 }
 
 export const partners = [
-  { name: 'Benchwarmers Nepal', logo: '/images/partners/benchwarmers.png', href: 'https://www.benchwarmers.com.np/' },
-  { name: 'Chitwan Cake House', logo: '/images/partners/chitwan-cake-house.jpg' },
-  { name: 'बगैंचा', logo: '/images/partners/bagaincha.png' },
-  { name: 'Surox Technology', logo: '/images/partners/surox.png' },
-  { name: 'Subham Law Institute', logo: '/images/partners/subham-law.jpg' },
-  { name: 'Access Education Network', logo: '/images/partners/access-education.jpg' },
-  { name: 'Kitab Yatra', logo: '/images/partners/kitab-yatra.png' },
-  { name: 'Chant', logo: '/images/partners/chant.png' },
-  { name: 'Stryde.np', logo: '/images/partners/stryde.png' },
+  { name: 'Benchwarmers Nepal', logo: '/images/partners/benchwarmers.webp', href: 'https://www.benchwarmers.com.np/' },
+  { name: 'Chitwan Cake House', logo: '/images/partners/chitwan-cake-house.webp' },
+  { name: 'बगैंचा', logo: '/images/partners/bagaincha.webp' },
+  { name: 'Surox Technology', logo: '/images/partners/surox.webp' },
+  { name: 'Subham Law Institute', logo: '/images/partners/subham-law.webp' },
+  { name: 'Access Education Network', logo: '/images/partners/access-education.webp' },
+  { name: 'Kitab Yatra', logo: '/images/partners/kitab-yatra.webp' },
+  { name: 'Chant', logo: '/images/partners/chant.webp' },
+  { name: 'Stryde.np', logo: '/images/partners/stryde.webp' },
 ]

@@ -5,6 +5,7 @@ import FilterChips from '@/components/common/FilterChips'
 import GalleryGrid from '@/components/gallery/GalleryGrid'
 import Lightbox from '@/components/gallery/Lightbox'
 import { galleryImages } from '@/data/gallery'
+import Seo from '@/components/common/Seo'
 
 const categories = ['All', ...new Set(galleryImages.map((i) => i.category))]
 
@@ -15,6 +16,7 @@ export default function Gallery() {
 
   return (
     <>
+      <Seo title="Gallery" description="Photos from Real Madrid Fan Club Nepal meetups, matches and events." path="/gallery" />
       <PageBanner title="Gallery" subtitle="Moments from our meetups, matches and events across Nepal." />
       <section className="bg-white py-12 md:py-16">
         <Container>

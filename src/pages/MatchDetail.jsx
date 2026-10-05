@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom'
 import { ArrowLeft, MapPin, Tv } from 'lucide-react'
 import PageBanner from '@/components/common/PageBanner'
+import Seo from '@/components/common/Seo'
 import Container from '@/components/common/Container'
 import Button from '@/components/common/Button'
 import Badge from '@/components/common/Badge'
@@ -38,6 +39,11 @@ export default function MatchDetail() {
 
   return (
     <>
+      <Seo
+        title={`${match.home} vs ${match.away}`}
+        description={`${match.home} ${match.score} ${match.away} – ${match.competition}, ${formatDate(match.date)} at ${match.venue}.`}
+        path={`/match/${match.slug}`}
+      />
       <PageBanner title={`${match.home} vs ${match.away}`} subtitle={match.round} />
 
       <section className="bg-secondary py-12 md:py-16">

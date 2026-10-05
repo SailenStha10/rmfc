@@ -23,12 +23,16 @@ export default function AboutSection() {
             src={first}
             alt="Madridistas gathered at a Real Madrid fan club event in Nepal"
             loading="lazy"
+            width="1024"
+            height="768"
             className="aspect-[4/3] w-full rounded-2xl object-cover shadow-lg"
           />
           <img
             src={second}
             alt="Real Madrid Fan Club Nepal community"
             loading="lazy"
+            width="1024"
+            height="489"
             className="absolute bottom-0 right-0 w-3/5 rounded-2xl border-4 border-white object-cover shadow-xl"
           />
         </Reveal>

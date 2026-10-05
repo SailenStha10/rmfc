@@ -1,10 +1,15 @@
 export const site = {
   name: 'RMFC Nepal',
   fullName: 'Real Madrid Fan Club Nepal',
-  logo: '/images/logo/rmfcn-logo.png',
+  logo: '/images/logo/rmfcn-logo.webp',
   brandText:
     'RMFC Nepal – The biggest Real Madrid supporter community in Nepal. United by passion, driven by legacy.',
   tagline: 'Hala Madrid y Nada Más',
+  // Set `url` to the deployed domain (used for canonical + Open Graph URLs)
+  url: 'https://rmfcn.com',
+  description:
+    "A home for every Nepalese Madridista to connect, support, and live the spirit of Real Madrid together. Join Nepal's official Real Madrid fan club.",
+  ogImage: '/images/hero/hero-1.webp',
   socials: [
     { name: 'Facebook', href: 'https://www.facebook.com/rmfcn' },
     { name: 'Instagram', href: 'https://www.instagram.com/rmfcnepal' },

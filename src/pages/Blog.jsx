@@ -5,6 +5,7 @@ import Container from '@/components/common/Container'
 import FilterChips from '@/components/common/FilterChips'
 import BlogCard from '@/components/blog/BlogCard'
 import { posts } from '@/data/blog'
+import Seo from '@/components/common/Seo'
 
 const categories = ['All', ...new Set(posts.map((p) => p.category))]
 
@@ -20,6 +21,7 @@ export default function Blog() {
 
   return (
     <>
+      <Seo title="Blog" description="Stories, news and fan journeys from the Nepalese Madridista community." path="/blog" />
       <PageBanner title="Blog" subtitle="Stories, news and fan journeys from the Madridista community." />
       <section className="bg-secondary py-12 md:py-16">
         <Container>
@@ -46,7 +48,7 @@ export default function Blog() {
             <ul className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {shown.map((p) => (
                 <li key={p.slug}>
-                  <BlogCard post={p} />
+                  <BlogCard post={p} as="h2" />
                 </li>
               ))}
             </ul>

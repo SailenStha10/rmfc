@@ -33,7 +33,7 @@ export default function MobileMenu({ open, onClose }) {
         id="mobile-menu"
         aria-label="Mobile menu"
         aria-hidden={!open}
-        inert={!open}
+        inert={open ? undefined : ''}
         className={`fixed right-0 top-0 z-50 flex h-full w-72 max-w-[85vw] flex-col bg-white p-4 shadow-xl transition-transform duration-300 xl:hidden ${
           open ? 'translate-x-0' : 'translate-x-full'
         }`}

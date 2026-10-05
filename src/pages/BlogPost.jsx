@@ -1,6 +1,7 @@
 import { Link, useParams } from 'react-router-dom'
 import { ArrowLeft } from 'lucide-react'
 import Badge from '@/components/common/Badge'
+import Seo from '@/components/common/Seo'
 import Container from '@/components/common/Container'
 import SectionHeading from '@/components/common/SectionHeading'
 import BlogCard from '@/components/blog/BlogCard'
@@ -21,6 +22,7 @@ export default function BlogPost() {
 
   return (
     <>
+      <Seo title={post.title} description={post.excerpt} path={`/blog/${post.slug}`} />
       <article className="bg-white py-12 md:py-16">
         <Container className="max-w-3xl">
           <nav aria-label="Breadcrumb" className="mb-6 text-sm text-muted-foreground">

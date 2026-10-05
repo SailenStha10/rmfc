@@ -8,10 +8,12 @@ import BlogPreview from '@/components/home/BlogPreview'
 import PartnersGrid from '@/components/home/PartnersGrid'
 import WingsMap from '@/components/home/WingsMap'
 import CTABanner from '@/components/home/CTABanner'
+import Seo from '@/components/common/Seo'
 
 export default function Home() {
   return (
     <>
+      <Seo description="Join Nepal's official Real Madrid fan club: match screenings, events, wings across Nepal and the Madridista community." path="/" />
       <HeroSlider />
       <AboutSection />
       <MatchSection />

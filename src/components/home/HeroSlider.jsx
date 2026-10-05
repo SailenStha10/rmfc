@@ -14,6 +14,7 @@ const arrow =
 export default function HeroSlider() {
   return (
     <section aria-label="Featured highlights" className="hero-slider relative h-[70vh] md:h-[85vh]">
+      <h1 className="sr-only">Real Madrid Fan Club Nepal</h1>
       <Swiper
         modules={[Autoplay, EffectFade, Navigation, Pagination, A11y]}
         effect="fade"
@@ -28,10 +29,13 @@ export default function HeroSlider() {
             <div className="relative h-full w-full bg-accent">
               <img
                 src={s.image}
+                srcSet={s.srcSet}
+                sizes={s.srcSet ? '100vw' : undefined}
+                width="1600"
+                height="900"
                 alt=""
                 className="absolute inset-0 h-full w-full object-cover"
                 loading={i === 0 ? 'eager' : 'lazy'}
-                fetchPriority={i === 0 ? 'high' : undefined}
               />
               <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/55 to-black/20" />
               <Container className="relative z-10 flex h-full items-center">
@@ -39,9 +43,9 @@ export default function HeroSlider() {
                   <p className="mb-3 font-heading text-sm font-semibold uppercase tracking-widest text-white/80">
                     {s.eyebrow}
                   </p>
-                  <h1 className="mb-4 text-4xl !text-white md:text-6xl md:leading-tight">
+                  <h2 className="mb-4 text-4xl !text-white md:text-6xl md:leading-tight">
                     {s.heading}
-                  </h1>
+                  </h2>
                   <p className="mb-8 max-w-xl text-base text-white/85 md:text-lg">{s.text}</p>
                   <Button to={s.to}>{s.cta}</Button>
                 </div>

@@ -9,6 +9,9 @@
 }
 
 .hero-slider .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  margin: 0 8px !important; /* >= 24px target spacing */
   background: #fff;
   opacity: 0.6;
 }

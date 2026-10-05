@@ -15,8 +15,10 @@ export default function GalleryPreview() {
             <Reveal as="li" key={img.id} delay={(i % 4) * 0.08} y={16}>
               <figure className="group relative aspect-square overflow-hidden rounded-xl bg-secondary">
                 <img
-                  src={img.src}
+                  src={img.thumb}
                   alt={img.alt}
+                  width="640"
+                  height="640"
                   loading="lazy"
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />

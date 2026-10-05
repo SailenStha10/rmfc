@@ -3,6 +3,7 @@ import { Link, NavLink, useLocation } from 'react-router-dom'
 import { Menu, Search, ShoppingCart } from 'lucide-react'
 import Container from '@/components/common/Container'
 import MobileMenu from './MobileMenu'
+import SearchOverlay from './SearchOverlay'
 import { useCart } from '@/hooks/useCart'
 import { useScrollPosition } from '@/hooks/useScrollPosition'
 import { authLinks, navLinks } from '@/data/navigation'
@@ -18,6 +19,8 @@ export default function Header() {
   // menu is "open" only for the page it was opened on, so navigating closes it
   const [openOn, setOpenOn] = useState(null)
   const menuOpen = openOn === pathname
+  const [searchOn, setSearchOn] = useState(null)
+  const searchOpen = searchOn === pathname
   const { count } = useCart()
   const scrolled = useScrollPosition() > 10
 
@@ -27,7 +30,7 @@ export default function Header() {
     >
       <Container className="flex h-20 items-center justify-between gap-4">
         <Link to="/" aria-label={`${site.name} home`} className="shrink-0">
-          <img src={site.logo} alt={site.fullName} className="h-14 w-auto" />
+          <img src={site.logo} alt={site.fullName} width="600" height="359" className="h-14 w-auto" />
         </Link>
 
         <nav aria-label="Primary" className="hidden items-center gap-6 xl:flex">
@@ -42,6 +45,8 @@ export default function Header() {
           <button
             type="button"
             aria-label="Search"
+            aria-haspopup="dialog"
+            onClick={() => setSearchOn(pathname)}
             className="rounded-md p-2 hover:bg-secondary"
           >
             <Search size={20} />
@@ -78,6 +83,7 @@ export default function Header() {
         </div>
       </Container>
       <MobileMenu open={menuOpen} onClose={() => setOpenOn(null)} />
+      <SearchOverlay key={searchOpen} open={searchOpen} onClose={() => setSearchOn(null)} />
     </header>
   )
 }

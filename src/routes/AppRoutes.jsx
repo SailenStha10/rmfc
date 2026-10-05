@@ -1,21 +1,24 @@
+import { lazy } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Layout from '@/components/layout/Layout'
-import Home from '@/pages/Home'
-import About from '@/pages/About'
-import Wings from '@/pages/Wings'
-import WingDetail from '@/pages/WingDetail'
-import Events from '@/pages/Events'
-import Gallery from '@/pages/Gallery'
-import Blog from '@/pages/Blog'
-import BlogPost from '@/pages/BlogPost'
-import Shop from '@/pages/Shop'
-import Cart from '@/pages/Cart'
-import JoinClub from '@/pages/JoinClub'
-import Contact from '@/pages/Contact'
-import Login from '@/pages/Login'
-import Register from '@/pages/Register'
-import MatchDetail from '@/pages/MatchDetail'
-import NotFound from '@/pages/NotFound'
+
+// Each page is its own chunk, loaded on first visit.
+const Home = lazy(() => import('@/pages/Home'))
+const About = lazy(() => import('@/pages/About'))
+const Wings = lazy(() => import('@/pages/Wings'))
+const WingDetail = lazy(() => import('@/pages/WingDetail'))
+const Events = lazy(() => import('@/pages/Events'))
+const Gallery = lazy(() => import('@/pages/Gallery'))
+const Blog = lazy(() => import('@/pages/Blog'))
+const BlogPost = lazy(() => import('@/pages/BlogPost'))
+const Shop = lazy(() => import('@/pages/Shop'))
+const Cart = lazy(() => import('@/pages/Cart'))
+const JoinClub = lazy(() => import('@/pages/JoinClub'))
+const Contact = lazy(() => import('@/pages/Contact'))
+const Login = lazy(() => import('@/pages/Login'))
+const Register = lazy(() => import('@/pages/Register'))
+const MatchDetail = lazy(() => import('@/pages/MatchDetail'))
+const NotFound = lazy(() => import('@/pages/NotFound'))
 
 export default function AppRoutes() {
   return (

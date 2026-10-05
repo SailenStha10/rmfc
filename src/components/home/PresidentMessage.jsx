@@ -20,6 +20,8 @@ export default function PresidentMessage() {
             src={president.image}
             alt={`${president.name}, ${president.title}`}
             loading="lazy"
+            width="768"
+            height="807"
             className="w-full rounded-2xl object-cover shadow-lg"
           />
         </Reveal>

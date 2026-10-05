@@ -8,10 +8,12 @@ import LegacyStats from '@/components/home/LegacyStats'
 import PresidentMessage from '@/components/home/PresidentMessage'
 import { aboutPage } from '@/data/aboutPage'
 import { about } from '@/data/about'
+import Seo from '@/components/common/Seo'
 
 export default function About() {
   return (
     <>
+      <Seo title="About Us" description="Pe�a Madridista de Nepal is a non-profit Real Madrid fan club founded on July 2, 2014 and officially recognised by Real Madrid C.F. in 2020." path="/about" />
       <PageBanner title={aboutPage.banner} />
 
       <section className="bg-white py-16 md:py-24">
@@ -32,6 +34,8 @@ export default function About() {
                 src={src}
                 alt={i === 0 ? 'Madridistas at a fan club event' : 'RMFC Nepal community'}
                 loading="lazy"
+                width="1024"
+                height={i === 0 ? 768 : 489}
                 className="w-full rounded-2xl object-cover shadow-lg"
               />
             ))}

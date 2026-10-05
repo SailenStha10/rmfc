@@ -5,6 +5,7 @@ import Reveal from '@/components/common/Reveal'
 import NepalMap from '@/components/common/NepalMap'
 import WingCard from '@/components/about/WingCard'
 import { wings, wingsPage, wingsSection } from '@/data/wings'
+import Seo from '@/components/common/Seo'
 
 export default function Wings() {
   const [active, setActive] = useState(null)
@@ -15,6 +16,7 @@ export default function Wings() {
 
   return (
     <>
+      <Seo title="Wings" description="Explore the seven regional wings of Real Madrid Fan Club Nepal: Kathmandu, Pokhara, Chitwan, Nuwakot, Province 1, Butwal and Jumla." path="/wings" />
       <PageBanner title="Wings" subtitle={wingsPage.text} />
       <section className="bg-secondary py-16">
         <Container>

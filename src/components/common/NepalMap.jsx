@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { wingMapConfig } from '@/data/wings'
 import { MAP_SIZE, geometryToPath, project } from '@/utils/geo'
@@ -7,15 +7,36 @@ import { MAP_SIZE, geometryToPath, project } from '@/utils/geo'
 export default function NepalMap({ wings, active = null, onActive = () => {} }) {
   const navigate = useNavigate()
   const [features, setFeatures] = useState([])
+  const box = useRef(null)
 
+  // The district shapes are ~0.5 MB: only fetch them once the map is about to scroll into view,
+  // so they never compete with the page's first paint.
   useEffect(() => {
+    const el = box.current
+    if (!el) return undefined
     let cancelled = false
-    fetch(wingMapConfig.geoJsonUrl)
-      .then((r) => r.json())
-      .then((g) => !cancelled && setFeatures(g.features))
-      .catch(() => {})
+    const load = () =>
+      fetch(wingMapConfig.geoJsonUrl)
+        .then((r) => r.json())
+        .then((g) => !cancelled && setFeatures(g.features))
+        .catch(() => {})
+    if (!('IntersectionObserver' in window)) {
+      load()
+      return undefined
+    }
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          io.disconnect()
+          load()
+        }
+      },
+      { rootMargin: '600px' },
+    )
+    io.observe(el)
     return () => {
       cancelled = true
+      io.disconnect()
     }
   }, [])
 
@@ -32,7 +53,7 @@ export default function NepalMap({ wings, active = null, onActive = () => {} }) 
   const tip = activeWing && project([activeWing.coords[1], activeWing.coords[0]])
 
   return (
-    <div className="relative overflow-hidden rounded-2xl border border-border bg-white p-4 shadow-sm">
+    <div ref={box} className="relative overflow-hidden rounded-2xl border border-border bg-white p-4 shadow-sm">
       <svg
         viewBox={`0 0 ${MAP_SIZE.width} ${MAP_SIZE.height}`}
         role="group"

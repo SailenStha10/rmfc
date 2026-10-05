@@ -1,3 +1,4 @@
+import { Suspense } from 'react'
 import { Outlet } from 'react-router-dom'
 import Header from './Header'
 import Footer from './Footer'
@@ -15,7 +16,10 @@ export default function Layout() {
       <ScrollToTop />
       <Header />
       <main id="main-content" tabIndex={-1} className="flex-1 outline-none">
-        <Outlet />
+        {/* full-height fallback keeps the footer below the fold while a page chunk loads (no layout shift) */}
+        <Suspense fallback={<div className="min-h-screen" aria-busy="true" />}>
+          <Outlet />
+        </Suspense>
       </main>
       <Footer />
     </div>

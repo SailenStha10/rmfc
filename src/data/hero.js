@@ -5,7 +5,8 @@ export const heroSlides = [
     text: 'A home for every Nepalese Madridista to connect, support, and live the spirit of Real Madrid together.',
     cta: 'Join Now',
     to: '/join-club',
-    image: '/images/hero/hero-1.png',
+    image: '/images/hero/hero-1.webp',
+    srcSet: '/images/hero/hero-1-800.webp 800w, /images/hero/hero-1.webp 1600w',
   },
   {
     eyebrow: 'Match Screening',
@@ -13,7 +14,7 @@ export const heroSlides = [
     text: 'Experience match-day energy with fellow Madridistas.',
     cta: 'View Events',
     to: '/events',
-    image: '/images/hero/hero-2.png',
+    image: '/images/hero/hero-2.webp',
   },
   {
     eyebrow: 'Official Merchandise',

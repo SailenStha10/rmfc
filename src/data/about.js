@@ -6,5 +6,5 @@ export const about = {
     'Beyond football, we promote friendship, respect, and sportsmanship while organizing events, watch parties, social activities, and charitable initiatives.',
   ],
   closing: 'Hala Madrid y Nada Más.',
-  images: ['/images/hero/about-1.jpg', '/images/hero/about-2.png'],
+  images: ['/images/hero/about-1.webp', '/images/hero/about-2.webp'],
 }

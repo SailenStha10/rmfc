@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { ArrowLeft } from 'lucide-react'
 import PageBanner from '@/components/common/PageBanner'
+import Seo from '@/components/common/Seo'
 import Container from '@/components/common/Container'
 import Button from '@/components/common/Button'
 import NepalMap from '@/components/common/NepalMap'
@@ -25,6 +26,11 @@ export default function WingDetail() {
 
   return (
     <>
+      <Seo
+        title={wing.name}
+        description={`${wing.name} of Real Madrid Fan Club Nepal, based in ${wing.base}. ${wing.members} members, founded ${wing.founded}.`}
+        path={`/wings/${wing.slug}`}
+      />
       <PageBanner
         title={wing.name}
         subtitle={`${wing.base}, Nepal · ${wing.members} Members · Founded ${wing.founded}`}

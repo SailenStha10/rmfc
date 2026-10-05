@@ -4,6 +4,7 @@ import PageBanner from '@/components/common/PageBanner'
 import Container from '@/components/common/Container'
 import EventCard from '@/components/common/EventCard'
 import { eventCategories, events } from '@/data/events'
+import Seo from '@/components/common/Seo'
 
 const timeTabs = ['Upcoming', 'Past']
 const today = new Date().toISOString().slice(0, 10)
@@ -27,6 +28,7 @@ export default function Events() {
 
   return (
     <>
+      <Seo title="Events" description="Futsal tournaments, meetups and match screenings organised by Real Madrid Fan Club Nepal." path="/events" />
       <PageBanner title="Events" subtitle="Futsal, meetups and match screenings with fellow Madridistas." />
       <section className="bg-white py-12 md:py-16">
         <Container>

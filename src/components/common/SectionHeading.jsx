@@ -3,7 +3,11 @@ export default function SectionHeading({ label, title, subtitle, align = 'center
   return (
     <div className={`mb-10 max-w-3xl ${alignment}`}>
       {label && (
-        <p className="mb-2 font-heading text-sm font-semibold uppercase tracking-widest text-primary">
+        <p
+          className={`mb-2 font-heading text-sm font-semibold uppercase tracking-widest ${
+            light ? 'text-white/80' : 'text-primary'
+          }`}
+        >
           {label}
         </p>
       )}
