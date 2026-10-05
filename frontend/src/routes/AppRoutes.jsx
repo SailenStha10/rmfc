@@ -5,6 +5,7 @@ import Layout from '@/components/layout/Layout'
 // Each page is its own chunk, loaded on first visit.
 const Home = lazy(() => import('@/pages/Home'))
 const About = lazy(() => import('@/pages/About'))
+const Team = lazy(() => import('@/pages/Team'))
 const Wings = lazy(() => import('@/pages/Wings'))
 const WingDetail = lazy(() => import('@/pages/WingDetail'))
 const Events = lazy(() => import('@/pages/Events'))
@@ -26,6 +27,7 @@ export default function AppRoutes() {
       <Route element={<Layout />}>
         <Route index element={<Home />} />
         <Route path="about" element={<About />} />
+        <Route path="team" element={<Team />} />
         <Route path="wings" element={<Wings />} />
         <Route path="wings/:slug" element={<WingDetail />} />
         <Route path="events" element={<Events />} />

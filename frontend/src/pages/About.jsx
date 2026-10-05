@@ -3,7 +3,8 @@ import Container from '@/components/common/Container'
 import Reveal from '@/components/common/Reveal'
 import SectionHeading from '@/components/common/SectionHeading'
 import FactsStrip from '@/components/about/FactsStrip'
-import TeamGrid from '@/components/about/TeamGrid'
+import HistoryTimeline from '@/components/about/HistoryTimeline'
+import Button from '@/components/common/Button'
 import LegacyStats from '@/components/home/LegacyStats'
 import PresidentMessage from '@/components/home/PresidentMessage'
 import { aboutPage } from '@/data/aboutPage'
@@ -45,8 +46,17 @@ export default function About() {
 
       <FactsStrip facts={aboutPage.facts} />
       <PresidentMessage />
+      <HistoryTimeline />
       <LegacyStats />
-      <TeamGrid team={aboutPage.team} />
+
+      <section className="bg-secondary py-16 text-center md:py-20">
+        <Container>
+          <Reveal>
+            <SectionHeading label={aboutPage.team.label} title="Meet The Team" subtitle={aboutPage.team.text} />
+            <Button to="/team">Our Team</Button>
+          </Reveal>
+        </Container>
+      </section>
     </>
   )
 }

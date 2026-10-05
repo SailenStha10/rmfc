@@ -7,6 +7,7 @@ export const navItems = [
     to: '/about',
     children: [
       { label: 'About Us', to: '/about' },
+      { label: 'Our Team', to: '/team' },
       { label: 'Wings', to: '/wings' },
       { label: 'Events', to: '/events' },
     ],
@@ -38,6 +39,7 @@ export const authMenu = {
 export const navLinks = [
   { label: 'Home', to: '/' },
   { label: 'About Us', to: '/about' },
+  { label: 'Our Team', to: '/team' },
   { label: 'Wings', to: '/wings' },
   { label: 'Events', to: '/events' },
   { label: 'Gallery', to: '/gallery' },
